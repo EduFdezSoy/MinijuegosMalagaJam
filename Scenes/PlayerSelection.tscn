@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://dm5h73bs117jr"]
+
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_hqt01"]
+[ext_resource type="Script" uid="uid://dq3x1iskvffgi" path="res://Assets/Scripts/PlayersController.gd" id="1_jtnjm"]
+[ext_resource type="Script" uid="uid://dqd747do6jri1" path="res://Assets/Scripts/PlayerButton.gd" id="2_2ny7y"]
+
+[node name="PlayerSelection" type="Node2D" unique_id=1452936896]
+
+[node name="PlayersController" type="Node" parent="." unique_id=428338449]
+script = ExtResource("1_jtnjm")
+
+[node name="Player 1" type="Node2D" parent="." unique_id=1454617281]
+position = Vector2(250, 350)
+script = ExtResource("2_2ny7y")
+
+[node name="Sprite" type="Sprite2D" parent="Player 1" unique_id=1055041605]
+modulate = Color(0.8137784, 0.28282133, 0.33851078, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_hqt01")
+
+[node name="Player 2" type="Node2D" parent="." unique_id=1459564953]
+position = Vector2(471, 350)
+script = ExtResource("2_2ny7y")
+playerId = 2
+
+[node name="Sprite" type="Sprite2D" parent="Player 2" unique_id=608958459]
+modulate = Color(0.15899232, 0.4149546, 0.7680975, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_hqt01")
+metadata/Color = Color(1, 1, 1, 1)
+
+[node name="Player 3" type="Node2D" parent="." unique_id=1279253964]
+position = Vector2(678, 350)
+script = ExtResource("2_2ny7y")
+playerId = 3
+
+[node name="Sprite" type="Sprite2D" parent="Player 3" unique_id=1110995948]
+modulate = Color(0.32677108, 0.65325326, 0.29733875, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_hqt01")
+metadata/Color = Color(1, 1, 1, 1)
+
+[node name="Player 4" type="Node2D" parent="." unique_id=1368542756]
+position = Vector2(900, 350)
+script = ExtResource("2_2ny7y")
+playerId = 4
+
+[node name="Sprite" type="Sprite2D" parent="Player 4" unique_id=158976496]
+modulate = Color(0.67444205, 0.6570362, 0.27338254, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("1_hqt01")
+metadata/Color = Color(1, 1, 1, 1)
