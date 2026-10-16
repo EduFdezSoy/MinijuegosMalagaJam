@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_hqt01"]
 [ext_resource type="Script" uid="uid://dq3x1iskvffgi" path="res://Assets/Scripts/PlayersController.gd" id="1_jtnjm"]
 [ext_resource type="Script" uid="uid://dqd747do6jri1" path="res://Assets/Scripts/PlayerButton.gd" id="2_2ny7y"]
+[ext_resource type="Script" uid="uid://cogkluld14x1i" path="res://Assets/Scripts/RoundController.gd" id="4_2ny7y"]
+[ext_resource type="Script" uid="uid://c8xhspffwdh2y" path="res://Assets/Scripts/StartButton.gd" id="4_mpou1"]
+[ext_resource type="PackedScene" uid="uid://bymi3w6nfe84" path="res://Scenes/Minigames/Minijuego1.tscn" id="5_f0lok"]
+[ext_resource type="PackedScene" uid="uid://cdgfbmswqylwo" path="res://Scenes/Minigames/Minijuego2.tscn" id="6_b33av"]
+[ext_resource type="PackedScene" uid="uid://bb8ml4ltvhd0q" path="res://Scenes/Minigames/Minijuego3.tscn" id="7_mpou1"]
 
 [node name="PlayerSelection" type="Node2D" unique_id=1452936896]
 
@@ -50,3 +55,13 @@ modulate = Color(0.67444205, 0.6570362, 0.27338254, 1)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
+
+[node name="StartButton" type="Node" parent="." unique_id=730089682]
+script = ExtResource("4_mpou1")
+
+[node name="RoundController" type="Node" parent="." unique_id=1558029353]
+script = ExtResource("4_2ny7y")
+availableMinigames = Array[PackedScene]([ExtResource("5_f0lok"), ExtResource("6_b33av"), ExtResource("7_mpou1")])
+minigamesInTheRound = 3
+
+[node name="MinigameContainer" type="Node" parent="." unique_id=741273415]

@@ -9,11 +9,11 @@ var playerSelected: bool = false
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	var action_name := "p%d_button" % playerId
-	if Input.is_action_pressed(action_name):
+	if Input.is_action_just_pressed(action_name):
 		PlayerButtonPressed()
 	
 
-func PlayerButtonPressed():
+func PlayerButtonPressed() -> void:
 	if(!playerSelected):
 		playerController.PlayerSelect(playerId)
 		playerSelected = true

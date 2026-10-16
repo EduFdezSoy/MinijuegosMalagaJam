@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bymi3w6nfe84"]
+
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_116ni"]
+
+[node name="Minijuego1" type="Node2D" unique_id=1996787499]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1122291142]
+position = Vector2(564, 159)
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=2088066266]
+texture = ExtResource("1_116ni")
