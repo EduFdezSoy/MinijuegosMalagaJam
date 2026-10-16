@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bisndasnc40kv" path="res://Scenes/UI/Options_Menu.tscn" id="1_67rak"]
 [ext_resource type="PackedScene" uid="uid://c5ls833l5auwa" path="res://Scenes/UI/LeaderBoard_Menu.tscn" id="2_7q6gp"]
+[ext_resource type="PackedScene" uid="uid://cvd1idw1hi0bv" path="res://Scenes/UI/Credits_Manu.tscn" id="3_1v43j"]
 
 [node name="TitleScreen" type="Control" unique_id=452230923]
 layout_mode = 3
@@ -15,4 +16,7 @@ grow_vertical = 2
 layout_mode = 1
 
 [node name="LeaderBoardMenu" parent="." unique_id=1584547499 instance=ExtResource("2_7q6gp")]
+layout_mode = 1
+
+[node name="CreditsManu" parent="." unique_id=310863001 instance=ExtResource("3_1v43j")]
 layout_mode = 1
