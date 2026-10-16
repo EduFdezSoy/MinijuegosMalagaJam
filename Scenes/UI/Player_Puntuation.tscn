@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://ccfetbwpxg4dq"]
+
+[node name="Personal_Puntuation" type="HBoxContainer" unique_id=127202023]
+alignment = 1
+
+[node name="Name_Label" type="Label" parent="." unique_id=1569823859]
+layout_mode = 2
+text = "Name_Label"
+
+[node name="Score_Label" type="Label" parent="." unique_id=839038224]
+layout_mode = 2
+text = "Score_Label"

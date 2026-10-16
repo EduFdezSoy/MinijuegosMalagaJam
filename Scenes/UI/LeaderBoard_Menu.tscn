@@ -1,5 +1,8 @@
 [gd_scene format=3 uid="uid://c5ls833l5auwa"]
 
+[ext_resource type="PackedScene" uid="uid://ccfetbwpxg4dq" path="res://Scenes/UI/Player_Puntuation.tscn" id="1_6q5nd"]
+[ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_u6ykh"]
+
 [node name="LeaderBoardMenu" type="Control" unique_id=1584547499]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +10,61 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background_Texture" type="TextureRect" parent="." unique_id=2122650306]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=353865236]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Leader_Board_Title" type="Label" parent="VBoxContainer" unique_id=2003322325]
+layout_mode = 2
+text = "Leader_Board_Menu_Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer" unique_id=1914225795]
+layout_mode = 2
+
+[node name="Player_Puntuation" parent="VBoxContainer/VBoxContainer" unique_id=127202023 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation2" parent="VBoxContainer/VBoxContainer" unique_id=1045774446 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation3" parent="VBoxContainer/VBoxContainer" unique_id=1637787825 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation4" parent="VBoxContainer/VBoxContainer" unique_id=498839043 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation5" parent="VBoxContainer/VBoxContainer" unique_id=944213980 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation6" parent="VBoxContainer/VBoxContainer" unique_id=30422518 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation7" parent="VBoxContainer/VBoxContainer" unique_id=1363142410 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation8" parent="VBoxContainer/VBoxContainer" unique_id=1181243816 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation9" parent="VBoxContainer/VBoxContainer" unique_id=1080788048 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Player_Puntuation10" parent="VBoxContainer/VBoxContainer" unique_id=1431538651 instance=ExtResource("1_6q5nd")]
+layout_mode = 2
+
+[node name="Back_Button" type="TextureButton" parent="VBoxContainer" unique_id=1343766860]
+layout_mode = 2
+texture_normal = ExtResource("1_u6ykh")
+stretch_mode = 3

@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://cvd1idw1hi0bv"]
+
+[ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_dsy88"]
+
+[node name="CreditsMenu" type="Control" unique_id=310863001]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=340061247]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Credits_Title" type="Label" parent="VBoxContainer" unique_id=765789837]
+layout_mode = 2
+text = "Credits_Menu_Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text_Credits" type="RichTextLabel" parent="VBoxContainer" unique_id=839449462]
+custom_minimum_size = Vector2(400, 400)
+layout_mode = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis pulvinar nibh, vitae sollicitudin orci ultrices sed. Aenean eu lacus porttitor, malesuada elit at, rutrum quam. Proin at tempor odio, rutrum eleifend nibh. Sed sed lorem eu ipsum vulputate imperdiet. Praesent sed eros purus. Sed enim justo, congue at eleifend faucibus, varius a sem. Donec nibh magna, vulputate nec nunc at, euismod bibendum tellus. Quisque pretium iaculis nisi, id porta est porttitor suscipit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut eleifend felis non dui imperdiet, et maximus turpis feugiat. Vestibulum porta viverra nisi, in consectetur elit rhoncus ut. Nam ac dapibus erat. Morbi et interdum quam, nec varius nulla.
+
+Pellentesque elementum urna libero, nec consectetur justo ultricies id. Suspendisse elementum lacus dolor, a semper felis feugiat nec. Nam nec eleifend neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris lectus eros, elementum quis augue at, mattis ullamcorper augue. Cras nec dignissim orci, a lobortis nunc. In eu ultricies quam. Suspendisse potenti. Proin at enim quis justo condimentum congue. Vivamus hendrerit nibh quam, eget pretium nulla hendrerit a. Mauris elementum eros finibus, vestibulum arcu vitae, rutrum nisl. Vestibulum ac lacus pretium, vehicula sem quis, luctus turpis. Donec at finibus urna. Praesent venenatis quam in arcu pulvinar ultrices.
+
+Nulla metus lorem, aliquam in ornare at, pulvinar vel tellus. Morbi ipsum nisi, ornare et scelerisque in, venenatis non erat. Nulla accumsan erat eu ipsum efficitur, ut rutrum lacus venenatis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Phasellus eu erat ac augue gravida molestie. Mauris ut nisl ac nisi aliquet vehicula. Quisque eu lobortis ligula, quis auctor purus. Duis pellentesque tempor dolor at eleifend. Quisque eget sagittis diam. Donec et blandit sem, id sagittis sem. Donec dictum sit amet est quis sodales. Vestibulum mauris diam, lobortis eu dignissim vitae, vestibulum et mi. Nunc vitae aliquam libero, eu sodales est. Suspendisse imperdiet arcu id mi faucibus, in scelerisque ipsum vestibulum. Etiam sed porta est. Vivamus placerat metus at eros aliquet, vitae volutpat ipsum blandit.
+
+Morbi ultricies ligula quis ultrices ullamcorper. Praesent vel rhoncus nisl, nec sodales libero. Morbi efficitur metus nec augue maximus, ac congue dolor hendrerit. Proin viverra rhoncus egestas. Aliquam blandit mauris arcu, sed hendrerit arcu porttitor sed. Etiam tincidunt, turpis sed dignissim facilisis, turpis sem interdum mauris, eget placerat urna est tempus ex. Aenean ex sapien, venenatis ut lectus ut, tristique molestie nibh. Nam aliquet euismod ligula ac interdum."
+
+[node name="Back_Button" type="TextureButton" parent="VBoxContainer" unique_id=311447158]
+layout_mode = 2
+texture_normal = ExtResource("1_dsy88")
+stretch_mode = 3

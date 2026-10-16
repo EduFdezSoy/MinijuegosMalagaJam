@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bisndasnc40kv"]
 
+[ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_58xgj"]
+
 [node name="OptionsMenu" type="Control" unique_id=1973162462]
 layout_mode = 3
 anchors_preset = 15
@@ -7,3 +9,88 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background_Texture" type="TextureRect" parent="." unique_id=88238320]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=290879911]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Options_Title" type="Label" parent="VBoxContainer" unique_id=479509919]
+layout_mode = 2
+text = "Options_Menu_Title"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=822670333]
+layout_mode = 2
+alignment = 1
+
+[node name="Audio_And_Exit_Settings" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1660909611]
+layout_mode = 2
+
+[node name="Audio_Master_Box" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=656871062]
+layout_mode = 2
+
+[node name="Label_Audio_Master" type="Label" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Master_Box" unique_id=259016352]
+layout_mode = 2
+text = "Audio_Master_Slider"
+
+[node name="Slider_Audio_Master" type="HSlider" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Master_Box" unique_id=833567886]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Audio_Music_Box" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=793233864]
+layout_mode = 2
+
+[node name="Label_Audio_Music" type="Label" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Music_Box" unique_id=870491405]
+layout_mode = 2
+text = "Audio_Music_Slider"
+
+[node name="Slider_Audio_Music" type="HSlider" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Music_Box" unique_id=911600233]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Audio_Sound_Box" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=1177100851]
+layout_mode = 2
+
+[node name="Label_Audio_Sound" type="Label" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Sound_Box" unique_id=1321771738]
+layout_mode = 2
+text = "Audio_Sound_Slider"
+
+[node name="Slider_Audio_Sound" type="HSlider" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Sound_Box" unique_id=1067154679]
+custom_minimum_size = Vector2(300, 0)
+layout_mode = 2
+
+[node name="Default_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=1768939369]
+layout_mode = 2
+texture_normal = ExtResource("1_58xgj")
+
+[node name="Back_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=1815625236]
+layout_mode = 2
+texture_normal = ExtResource("1_58xgj")
+
+[node name="Other_Settings" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1555146540]
+layout_mode = 2
+
+[node name="Particles_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Other_Settings" unique_id=141953622]
+layout_mode = 2
+texture_normal = ExtResource("1_58xgj")
+stretch_mode = 3
+
+[node name="Skip_Intros_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Other_Settings" unique_id=67155970]
+layout_mode = 2
+texture_normal = ExtResource("1_58xgj")
+stretch_mode = 3
+
+[node name="Skip_Dialogue" type="TextureButton" parent="VBoxContainer/HBoxContainer/Other_Settings" unique_id=2138234262]
+layout_mode = 2
+texture_normal = ExtResource("1_58xgj")
+stretch_mode = 3
