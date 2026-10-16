@@ -18,6 +18,9 @@ func PlayerSelect(playerId: int) -> void:
 	activePlayerCount+=1
 	print("Jugador ",index," se ha unido")
 
+
+func GetPlayersCount() -> int:
+	return activePlayerCount
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
