@@ -1,8 +1,9 @@
 [gd_scene format=3 uid="uid://c5ls833l5auwa"]
 
 [ext_resource type="PackedScene" uid="uid://ccfetbwpxg4dq" path="res://Scenes/UI/Player_Puntuation.tscn" id="1_6q5nd"]
+[ext_resource type="Script" uid="uid://dish3uo0pg51y" path="res://Scripts/UI/leader_board_menu.gd" id="1_or27c"]
 [ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_u6ykh"]
-[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/TextureButton_Script.gd" id="3_d378o"]
+[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/Componets/TextureButton_Script.gd" id="3_d378o"]
 
 [node name="LeaderBoardMenu" type="Control" unique_id=1584547499]
 layout_mode = 3
@@ -11,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_or27c")
 
 [node name="Background_Texture" type="TextureRect" parent="." unique_id=2122650306]
 layout_mode = 0
@@ -70,3 +72,5 @@ layout_mode = 2
 texture_normal = ExtResource("1_u6ykh")
 stretch_mode = 3
 script = ExtResource("3_d378o")
+
+[connection signal="pressed" from="VBoxContainer/Back_Button" to="." method="return_menu"]

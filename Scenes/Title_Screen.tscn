@@ -1,11 +1,427 @@
 [gd_scene format=3 uid="uid://ciy8q6b85y4oc"]
 
-[ext_resource type="Script" uid="uid://d2kmtvfnkyw1c" path="res://Scenes/title_screen.gd" id="1_3dv6r"]
+[ext_resource type="Script" uid="uid://d2kmtvfnkyw1c" path="res://Scripts/UI/title_screen.gd" id="1_3dv6r"]
 [ext_resource type="PackedScene" uid="uid://bisndasnc40kv" path="res://Scenes/UI/Options_Menu.tscn" id="1_67rak"]
 [ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_tkhh5"]
 [ext_resource type="PackedScene" uid="uid://c5ls833l5auwa" path="res://Scenes/UI/LeaderBoard_Menu.tscn" id="2_7q6gp"]
 [ext_resource type="PackedScene" uid="uid://cvd1idw1hi0bv" path="res://Scenes/UI/Credits_Menu.tscn" id="3_1v43j"]
-[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/TextureButton_Script.gd" id="3_gqj06"]
+[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/Componets/TextureButton_Script.gd" id="3_gqj06"]
+
+[sub_resource type="Animation" id="Animation_3dv6r"]
+resource_name = "Credits_to_MainMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditsMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreditsMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.6),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.6, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_gqj06"]
+resource_name = "LeaderBoard_to_MainMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LeaderBoardMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("LeaderBoardMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j6esa"]
+resource_name = "MainMenu_to_Credits"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CreditsMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CreditsMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_tx22t"]
+resource_name = "MainMenu_to_LeaderBoard"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LeaderBoardMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeaderBoardMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_lnh8l"]
+resource_name = "MainMenu_to_Options"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MainMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MainMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("OptionsMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("OptionsMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_6yxgh"]
+resource_name = "Options_to_MainMenu"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("OptionsMenu:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("OptionsMenu:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("MainMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("MainMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0.5, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_g57fv"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("CreditsMenu:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("CreditsMenu:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("LeaderBoardMenu:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("LeaderBoardMenu:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("OptionsMenu:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("OptionsMenu:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("MainMenu:visible")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/7/type = "value"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("MainMenu:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x73ql"]
+_data = {
+&"Credits_to_MainMenu": SubResource("Animation_3dv6r"),
+&"LeaderBoard_to_MainMenu": SubResource("Animation_gqj06"),
+&"MainMenu_to_Credits": SubResource("Animation_j6esa"),
+&"MainMenu_to_LeaderBoard": SubResource("Animation_tx22t"),
+&"MainMenu_to_Options": SubResource("Animation_lnh8l"),
+&"Options_to_MainMenu": SubResource("Animation_6yxgh"),
+&"RESET": SubResource("Animation_g57fv")
+}
 
 [node name="TitleScreen" type="Control" unique_id=452230923]
 layout_mode = 3
@@ -21,39 +437,48 @@ layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Title_Screen_Elements" type="VBoxContainer" parent="." unique_id=1153700695]
+[node name="MainMenu" type="Control" parent="." unique_id=1341460172]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Title_Screen_Elements" type="VBoxContainer" parent="MainMenu" unique_id=1153700695]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
 alignment = 1
 
-[node name="Logo_Texture" type="TextureRect" parent="Title_Screen_Elements" unique_id=1688777284]
+[node name="Logo_Texture" type="TextureRect" parent="MainMenu/Title_Screen_Elements" unique_id=1688777284]
 layout_mode = 2
 texture = ExtResource("1_tkhh5")
 
-[node name="VBoxContainer" type="HBoxContainer" parent="Title_Screen_Elements" unique_id=649749859]
+[node name="VBoxContainer" type="HBoxContainer" parent="MainMenu/Title_Screen_Elements" unique_id=649749859]
 layout_mode = 2
 alignment = 1
 
-[node name="Option_Button" type="TextureButton" parent="Title_Screen_Elements/VBoxContainer" unique_id=758445038]
+[node name="Options_Button" type="TextureButton" parent="MainMenu/Title_Screen_Elements/VBoxContainer" unique_id=758445038]
 layout_mode = 2
 texture_normal = ExtResource("1_tkhh5")
 script = ExtResource("3_gqj06")
 
-[node name="Start_Button" type="TextureButton" parent="Title_Screen_Elements/VBoxContainer" unique_id=79006293]
+[node name="Start_Button" type="TextureButton" parent="MainMenu/Title_Screen_Elements/VBoxContainer" unique_id=79006293]
 layout_mode = 2
 texture_normal = ExtResource("1_tkhh5")
 script = ExtResource("3_gqj06")
 
-[node name="Leader_Board_Menu" type="TextureButton" parent="Title_Screen_Elements/VBoxContainer" unique_id=976483480]
+[node name="Leader_Board_Menu" type="TextureButton" parent="MainMenu/Title_Screen_Elements/VBoxContainer" unique_id=976483480]
 layout_mode = 2
 texture_normal = ExtResource("1_tkhh5")
 script = ExtResource("3_gqj06")
 
-[node name="Credits_Button" type="TextureButton" parent="Title_Screen_Elements/VBoxContainer" unique_id=1726332061]
+[node name="Credits_Button" type="TextureButton" parent="MainMenu/Title_Screen_Elements/VBoxContainer" unique_id=1726332061]
 layout_mode = 2
 texture_normal = ExtResource("1_tkhh5")
 script = ExtResource("3_gqj06")
@@ -66,6 +491,22 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
-[node name="CreditsManu" parent="." unique_id=310863001 instance=ExtResource("3_1v43j")]
+[node name="CreditsMenu" parent="." unique_id=310863001 instance=ExtResource("3_1v43j")]
 visible = false
 layout_mode = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1926156613]
+libraries/ = SubResource("AnimationLibrary_x73ql")
+
+[connection signal="pressed" from="MainMenu/Title_Screen_Elements/VBoxContainer/Options_Button" to="." method="menu_options_button" binds= ["Options"]]
+[connection signal="pressed" from="MainMenu/Title_Screen_Elements/VBoxContainer/Start_Button" to="." method="start_game"]
+[connection signal="pressed" from="MainMenu/Title_Screen_Elements/VBoxContainer/Leader_Board_Menu" to="." method="menu_options_button" binds= ["LeaderBoard"]]
+[connection signal="pressed" from="MainMenu/Title_Screen_Elements/VBoxContainer/Credits_Button" to="." method="menu_options_button" binds= ["Credits"]]
+[connection signal="options_menu" from="OptionsMenu" to="." method="menu_options_button" binds= ["ToMainMenu_In_Options"]]
+[connection signal="leaderboard_menu" from="LeaderBoardMenu" to="." method="menu_options_button" binds= ["ToMainMenu_In_LeaderBoard"]]
+[connection signal="credits_menu" from="CreditsMenu" to="." method="menu_options_button" binds= ["ToMainMenu_In_Credits"]]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_animation_finished"]
+
+[editable path="OptionsMenu"]
+[editable path="LeaderBoardMenu"]
+[editable path="CreditsMenu"]
