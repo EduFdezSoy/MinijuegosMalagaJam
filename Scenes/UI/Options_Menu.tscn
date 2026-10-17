@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bisndasnc40kv"]
 
+[ext_resource type="Script" uid="uid://bgkx21574l3e6" path="res://Scripts/UI/SliderAudio_Script.gd" id="1_8w2fx"]
 [ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_58xgj"]
+[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/TextureButton_Script.gd" id="2_63i4o"]
 
 [node name="OptionsMenu" type="Control" unique_id=1973162462]
 layout_mode = 3
@@ -46,6 +48,8 @@ text = "Audio_Master_Slider"
 [node name="Slider_Audio_Master" type="HSlider" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Master_Box" unique_id=833567886]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+script = ExtResource("1_8w2fx")
+bus_name = "Master"
 
 [node name="Audio_Music_Box" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=793233864]
 layout_mode = 2
@@ -57,6 +61,8 @@ text = "Audio_Music_Slider"
 [node name="Slider_Audio_Music" type="HSlider" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Music_Box" unique_id=911600233]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+script = ExtResource("1_8w2fx")
+bus_name = "Music"
 
 [node name="Audio_Sound_Box" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=1177100851]
 layout_mode = 2
@@ -68,14 +74,18 @@ text = "Audio_Sound_Slider"
 [node name="Slider_Audio_Sound" type="HSlider" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings/Audio_Sound_Box" unique_id=1067154679]
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
+script = ExtResource("1_8w2fx")
+bus_name = "SFX"
 
 [node name="Default_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=1768939369]
 layout_mode = 2
 texture_normal = ExtResource("1_58xgj")
+script = ExtResource("2_63i4o")
 
 [node name="Back_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Audio_And_Exit_Settings" unique_id=1815625236]
 layout_mode = 2
 texture_normal = ExtResource("1_58xgj")
+script = ExtResource("2_63i4o")
 
 [node name="Other_Settings" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=1555146540]
 layout_mode = 2
@@ -84,13 +94,16 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("1_58xgj")
 stretch_mode = 3
+script = ExtResource("2_63i4o")
 
 [node name="Skip_Intros_Button" type="TextureButton" parent="VBoxContainer/HBoxContainer/Other_Settings" unique_id=67155970]
 layout_mode = 2
 texture_normal = ExtResource("1_58xgj")
 stretch_mode = 3
+script = ExtResource("2_63i4o")
 
 [node name="Skip_Dialogue" type="TextureButton" parent="VBoxContainer/HBoxContainer/Other_Settings" unique_id=2138234262]
 layout_mode = 2
 texture_normal = ExtResource("1_58xgj")
 stretch_mode = 3
+script = ExtResource("2_63i4o")

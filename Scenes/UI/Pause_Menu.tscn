@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bisndasnc40kv" path="res://Scenes/UI/Options_Menu.tscn" id="1_ce0ii"]
 [ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_futms"]
+[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/TextureButton_Script.gd" id="2_hqsf3"]
 
 [node name="PauseMenu" type="Control" unique_id=1187655210]
 layout_mode = 3
@@ -37,16 +38,19 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("1_futms")
 stretch_mode = 3
+script = ExtResource("2_hqsf3")
 
 [node name="Options_Menu" type="TextureButton" parent="VBoxContainer" unique_id=779416183]
 layout_mode = 2
 texture_normal = ExtResource("1_futms")
 stretch_mode = 3
+script = ExtResource("2_hqsf3")
 
 [node name="Main_Menu" type="TextureButton" parent="VBoxContainer" unique_id=1711476791]
 layout_mode = 2
 texture_normal = ExtResource("1_futms")
 stretch_mode = 3
+script = ExtResource("2_hqsf3")
 
 [node name="OptionsMenu" parent="." unique_id=1973162462 instance=ExtResource("1_ce0ii")]
 visible = false

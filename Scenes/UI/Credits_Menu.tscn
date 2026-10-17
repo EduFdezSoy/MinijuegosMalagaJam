@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cvd1idw1hi0bv"]
 
 [ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_dsy88"]
+[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/TextureButton_Script.gd" id="2_7alsd"]
 
 [node name="CreditsMenu" type="Control" unique_id=310863001]
 layout_mode = 3
@@ -40,3 +41,4 @@ Morbi ultricies ligula quis ultrices ullamcorper. Praesent vel rhoncus nisl, nec
 layout_mode = 2
 texture_normal = ExtResource("1_dsy88")
 stretch_mode = 3
+script = ExtResource("2_7alsd")

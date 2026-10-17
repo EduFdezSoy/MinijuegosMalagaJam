@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://ccfetbwpxg4dq" path="res://Scenes/UI/Player_Puntuation.tscn" id="1_6q5nd"]
 [ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="1_u6ykh"]
+[ext_resource type="Script" uid="uid://nuigl23uwlj5" path="res://Scripts/UI/TextureButton_Script.gd" id="3_d378o"]
 
 [node name="LeaderBoardMenu" type="Control" unique_id=1584547499]
 layout_mode = 3
@@ -68,3 +69,4 @@ layout_mode = 2
 layout_mode = 2
 texture_normal = ExtResource("1_u6ykh")
 stretch_mode = 3
+script = ExtResource("3_d378o")
