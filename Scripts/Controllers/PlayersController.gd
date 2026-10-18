@@ -1,7 +1,12 @@
 extends Node
 
+signal PlayerSelectionChangeState(state: bool)
 var activePlayers: Array[bool] = [false, false, false, false]
 var activePlayerCount: int = 0
+
+
+func _ready() -> void:
+	SetPlayerButtonsState(true)
 
 func PlayerSelect(playerId: int) -> void:
 	var index = playerId -1
@@ -17,6 +22,8 @@ func PlayerSelect(playerId: int) -> void:
 	activePlayerCount+=1
 	print("Jugador %d se ha unido" % index)
 
+func SetPlayerButtonsState(state:bool) -> void:
+	PlayerSelectionChangeState.emit(state)
 
 func GetPlayersCount() -> int:
 	return activePlayerCount

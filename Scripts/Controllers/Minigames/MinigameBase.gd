@@ -8,7 +8,7 @@ signal minigameFinished(results: Dictionary)
 # Identificadores de los jugadores que participan.
 var activePlayerIds: Array[int] = []
 
-var isRunning: bool = false
+var minigameEnabled: bool = false
 
 
 # Inicializa el minijuego con los jugadores
@@ -22,7 +22,7 @@ func Initialize(players: Array[int]) -> void:
 			OnInputPlayerPressed
 		)
 
-	isRunning = true
+	minigameEnabled = true
 	OnMinigameStarted()
 
 
@@ -32,29 +32,29 @@ func OnMinigameStarted() -> void:
 
 
 # Detecta cuando se pulsan los botones y filtra para no pillar botones de personas que no estén jugando
-func OnInputPlayerPressed(player_id: int) -> void:
-	if not isRunning:
+func OnInputPlayerPressed(playerId: int) -> void:
+	if not minigameEnabled:
 		return
 
-	if not activePlayerIds.has(player_id):
+	if not activePlayerIds.has(playerId):
 		return
 
-	OnPlayerPressed(player_id)
+	OnPlayerPressed(playerId)
 
 
 # Cada minijuego implementará que pasa cuando se pulsa el botón de cada jugador
-func OnPlayerPressed(_player_id: int) -> void:
+func OnPlayerPressed(playerId: int) -> void:
 	pass
 
 
 # Termina el minijuego y emite la signal
 func FinishMinigame(results: Dictionary) -> void:
-	if not isRunning:
+	if not minigameEnabled:
 		return
 
-	isRunning = false
+	minigameEnabled = false
 	minigameFinished.emit(results)
 
 
 func StopMinigame() -> void:
-	isRunning = false
+	minigameEnabled = false

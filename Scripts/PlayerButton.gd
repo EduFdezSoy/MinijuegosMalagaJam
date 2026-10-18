@@ -2,21 +2,39 @@ extends Node2D
 class_name PlayerButton
 
 @export_range(1,4) var playerId: int = 1
-	
 var playerSelected: bool = false
+var buttonState: bool = true
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
-	var action_name := "p%d_button" % playerId
-	if Input.is_action_just_pressed(action_name):
-		PlayerButtonPressed()
+func _ready() -> void:
+	if not PlayersController.PlayerSelectionChangeState.is_connected(SetButtonState):
+			PlayersController.PlayerSelectionChangeState.connect(SetButtonState)
+	SetButtonState(true)
 	
+	
+func ButtonPressed(playerIdPressed: int) -> void:
+	if(playerIdPressed == playerId):
+		PlayerButtonPressed()
+
+func SetButtonState(state:bool) -> void:
+	buttonState = state
+	print("Se ha puesto el estado del botón en: ", state)
+	if(buttonState):
+		show()
+		if not InputController.playerButtonPressed.is_connected(ButtonPressed):
+			InputController.playerButtonPressed.connect(ButtonPressed)
+			
+	else:
+		hide()
+		if InputController.playerButtonPressed.is_connected(ButtonPressed):
+			InputController.playerButtonPressed.disconnect(ButtonPressed)
+			
 
 func PlayerButtonPressed() -> void:
-	if(!playerSelected):
+	if(not playerSelected):
 		PlayersController.PlayerSelect(playerId)
 		playerSelected = true
 		var target_scale = Vector2(1.2, 1.2) 
 		scale = target_scale
+		print("Jugador ",playerId, " ha pulsado el botón en el inicio")
 	else:
-		print("Jugador ",playerId, " ha pulsado el botón")
+		print("Jugador ",playerId, " ha pulsado el botón en el inicio")

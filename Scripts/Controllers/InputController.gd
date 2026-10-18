@@ -1,6 +1,7 @@
 extends Node
 
 signal playerButtonPressed(playerId: int)
+var GameInitialized: bool = false
 
 const PLAYER_ACTIONS := {
 	1: "p1_button",

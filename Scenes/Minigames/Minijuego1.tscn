@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://bymi3w6nfe84"]
 
 [ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_116ni"]
+[ext_resource type="Script" uid="uid://bfslgit2kd106" path="res://Scripts/Controllers/Minigames/Minigame 1/MinigameOne.gd" id="1_u5u0k"]
 
 [node name="Minijuego1" type="Node2D" unique_id=1996787499]
+script = ExtResource("1_u5u0k")
 
 [node name="Node2D" type="Node2D" parent="." unique_id=1122291142]
 position = Vector2(564, 159)
