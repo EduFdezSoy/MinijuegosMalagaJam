@@ -10,3 +10,12 @@
 [node name="PauseMenu" parent="." unique_id=1187655210 instance=ExtResource("1_gl6un")]
 
 [node name="LeaderBoardMenu" parent="." unique_id=1584547499 instance=ExtResource("2_j5yw3")]
+visible = false
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = 1.0
+offset_right = 1151.0
+offset_bottom = 648.0
+grow_horizontal = 1
+grow_vertical = 1
