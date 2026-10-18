@@ -1,6 +1,6 @@
 extends Node
 
-var currentMinigame: Node = null
+var currentMinigame: MinigameBase = null
 
 #Usar esta función justo despues de hacer la transición de salida de un minijuego
 func LoadCurrentMinigame(roundController: RoundController) -> void:
@@ -30,6 +30,9 @@ func LoadMinigame(scene: PackedScene) -> void:
 		return
 
 	container.add_child(currentMinigame)
+	var playersIds: Array[int] = PlayersController.GetCurrentPlayersIds()
+	#El objeto de las escenas debe tener el script heredado de MinigameBase para poder inicializarlo
+	currentMinigame.Initialize(playersIds)
 
 
 func UnloadMinigame() -> void:

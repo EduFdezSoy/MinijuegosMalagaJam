@@ -35,5 +35,7 @@ func CreateRound() -> void:
 	for i in range(scenesInRound.size()):
 		print("Minijuego ", i + 1, ": ", scenesInRound[i].resource_path)
 
+	
+
 func GetCurrentMinigame() -> PackedScene:
 	return scenesInRound[currentMinigame]

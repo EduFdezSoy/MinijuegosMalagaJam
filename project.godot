@@ -22,6 +22,9 @@ buses/default_bus_layout="uid://cpv4wnp1dfheg"
 [autoload]
 
 SceneManager="*uid://caw7mqws47j1j"
+ScoreManager="*uid://cucqf4fe5tdj3"
+InputController="*uid://tl65glayk1rn"
+PlayersController="*uid://dq3x1iskvffgi"
 
 [display]
 

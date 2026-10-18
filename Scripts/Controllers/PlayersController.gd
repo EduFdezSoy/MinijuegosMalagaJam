@@ -1,5 +1,4 @@
 extends Node
-class_name PlayerController
 
 var activePlayers: Array[bool] = [false, false, false, false]
 var activePlayerCount: int = 0
@@ -16,16 +15,18 @@ func PlayerSelect(playerId: int) -> void:
 		
 	activePlayers[index] = true;
 	activePlayerCount+=1
-	print("Jugador ",index," se ha unido")
+	print("Jugador %d se ha unido" % index)
 
 
 func GetPlayersCount() -> int:
 	return activePlayerCount
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
 
+func GetCurrentPlayersIds() -> Array[int]:
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+#Preparamos un array con el id de los jugadores
+	var playerIds: Array[int] = []
+	for playerId in activePlayers.size():
+		if(activePlayers[playerId]):
+			playerIds.append(playerId + 1)
+
+	return playerIds;
