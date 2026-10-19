@@ -12,6 +12,10 @@ var scenesInRound: Array[PackedScene] = []
 
 var currentMinigame: int = 0
 
+func _ready() -> void:
+	SceneManager.InitializeSceneManager(self)
+	MinigamesController.StartMinigameController(self)
+
 func CreateRound() -> void:
 	scenesInRound.clear()
 
@@ -35,7 +39,11 @@ func CreateRound() -> void:
 	for i in range(scenesInRound.size()):
 		print("Minijuego ", i + 1, ": ", scenesInRound[i].resource_path)
 
-	
+func NextMinigame() -> void:
+	currentMinigame += 1
+
+func IsRoundFinish() -> bool:
+	return currentMinigame >= scenesInRound.size()
 
 func GetCurrentMinigame() -> PackedScene:
 	return scenesInRound[currentMinigame]

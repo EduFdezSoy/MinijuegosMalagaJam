@@ -15,12 +15,8 @@ var minigameEnabled: bool = false
 func Initialize(players: Array[int]) -> void:
 	activePlayerIds = players.duplicate()
 
-	if not InputController.playerButtonPressed.is_connected(
-		OnInputPlayerPressed
-	):
-		InputController.playerButtonPressed.connect(
-			OnInputPlayerPressed
-		)
+	if not InputController.playerButtonPressed.is_connected(OnInputPlayerPressed):
+		InputController.playerButtonPressed.connect(OnInputPlayerPressed)
 
 	minigameEnabled = true
 	OnMinigameStarted()
@@ -47,14 +43,8 @@ func OnPlayerPressed(playerId: int) -> void:
 	pass
 
 
-# Termina el minijuego y emite la signal
-func FinishMinigame(results: Dictionary) -> void:
-	if not minigameEnabled:
-		return
-
-	minigameEnabled = false
-	minigameFinished.emit(results)
-
 
 func StopMinigame() -> void:
 	minigameEnabled = false
+	if InputController.playerButtonPressed.is_connected(OnInputPlayerPressed):
+		InputController.playerButtonPressed.disconnect(OnInputPlayerPressed)

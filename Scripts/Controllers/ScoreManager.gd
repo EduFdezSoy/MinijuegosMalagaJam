@@ -16,6 +16,9 @@ func InitializeScores(jugadoresEnPartida: Array[int]) -> void:
 
 # Suma puntos a un jugador.
 func AddScore(playerId: int, points: int) -> void:
+	if(playerId == 0):
+		print("No ganó nadie")
+	
 	if not playerScores.has(playerId):
 		push_warning("El jugador %d no está registrado." % playerId)
 		return

@@ -2,12 +2,57 @@
 
 [ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_116ni"]
 [ext_resource type="Script" uid="uid://bfslgit2kd106" path="res://Scripts/Controllers/Minigames/Minigame 1/MinigameOne.gd" id="1_u5u0k"]
+[ext_resource type="Script" uid="uid://cxd8nyje6mpp0" path="res://Scripts/Controllers/Minigames/Minigame 1/HorizontalPlayerMovement.gd" id="2_d8pki"]
+[ext_resource type="Script" uid="uid://byav5nb6ppjh" path="res://Scripts/Controllers/Minigames/Minigame 1/PollitoInglesCheck.gd" id="2_yj3q8"]
 
-[node name="Minijuego1" type="Node2D" unique_id=1996787499]
+[node name="Minijuego1" type="Node2D" unique_id=1996787499 node_paths=PackedStringArray("playersHorizontalMove", "pollitoInglesCheck")]
 script = ExtResource("1_u5u0k")
+playersHorizontalMove = NodePath("PlayersHorizontalMove")
+pollitoInglesCheck = NodePath("PollitoInglesCheck")
 
-[node name="Node2D" type="Node2D" parent="." unique_id=1122291142]
-position = Vector2(564, 159)
+[node name="PollitoInglesCheck" type="Node" parent="." unique_id=2100802978 node_paths=PackedStringArray("spriteCheck")]
+script = ExtResource("2_yj3q8")
+spriteCheck = NodePath("../Semaforo")
+winningXPosition = 940.0
 
-[node name="Sprite2D" type="Sprite2D" parent="Node2D" unique_id=2088066266]
+[node name="PlayersHorizontalMove" type="Node2D" parent="." unique_id=1122291142 node_paths=PackedStringArray("players")]
+script = ExtResource("2_d8pki")
+players = [NodePath("Jugador1"), NodePath("Jugador2"), NodePath("Jugador3"), NodePath("Jugador4")]
+playersInitialXPosition = 100
+horizontalMovementPerClick = 25.0
+movementDuration = 0.15
+
+[node name="Jugador1" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=2088066266]
+modulate = Color(0.89747417, 0.31039852, 0.28828102, 1)
+position = Vector2(100.5, 149.5)
+scale = Vector2(0.34570313, 0.20507813)
+texture = ExtResource("1_116ni")
+
+[node name="Jugador2" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=1423625554]
+modulate = Color(0.16078432, 0.41568628, 0.76862746, 1)
+position = Vector2(100.5, 283.23)
+scale = Vector2(0.34570313, 0.20507813)
+texture = ExtResource("1_116ni")
+
+[node name="Jugador3" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=1668542855]
+modulate = Color(0.3254902, 0.654902, 0.29803923, 1)
+position = Vector2(100.5, 399.23)
+scale = Vector2(0.34570313, 0.20507813)
+texture = ExtResource("1_116ni")
+
+[node name="Jugador4" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=494014490]
+modulate = Color(0.6745098, 0.65882355, 0.27450982, 1)
+position = Vector2(100.5, 515.23)
+scale = Vector2(0.34570313, 0.20507813)
+texture = ExtResource("1_116ni")
+
+[node name="Meta" type="Sprite2D" parent="." unique_id=1095134998]
+modulate = Color(1, 1, 1, 0.39607844)
+position = Vector2(940, 300)
+scale = Vector2(0.14, 3.75)
+texture = ExtResource("1_116ni")
+
+[node name="Semaforo" type="Sprite2D" parent="." unique_id=427955006]
+position = Vector2(1091, 74.000015)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("1_116ni")

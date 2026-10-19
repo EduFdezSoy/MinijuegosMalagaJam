@@ -1,9 +1,13 @@
 extends Node
 
 var currentMinigame: MinigameBase = null
+var roundController: RoundController
 
 #Usar esta función justo despues de hacer la transición de salida de un minijuego
-func LoadCurrentMinigame(roundController: RoundController) -> void:
+func InitializeSceneManager(roundC: RoundController) -> void:
+	roundController = roundC
+	
+func LoadCurrentMinigame() -> void:
 	LoadMinigame(roundController.GetCurrentMinigame())
 
 
