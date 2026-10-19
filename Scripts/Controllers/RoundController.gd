@@ -13,8 +13,10 @@ var scenesInRound: Array[PackedScene] = []
 var currentMinigame: int = 0
 
 func _ready() -> void:
+	PlayersController.Initialize()
 	SceneManager.InitializeSceneManager(self)
 	MinigamesController.StartMinigameController(self)
+	InputController.GameInitialized = false
 
 func CreateRound() -> void:
 	scenesInRound.clear()

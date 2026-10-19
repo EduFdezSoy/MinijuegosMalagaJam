@@ -5,7 +5,9 @@ var activePlayers: Array[bool] = [false, false, false, false]
 var activePlayerCount: int = 0
 
 
-func _ready() -> void:
+func Initialize() -> void:
+	activePlayers = [false, false, false, false]
+	activePlayerCount = 0
 	SetPlayerButtonsState(true)
 
 func PlayerSelect(playerId: int) -> void:

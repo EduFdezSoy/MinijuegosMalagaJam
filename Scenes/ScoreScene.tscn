@@ -1,0 +1,88 @@
+[gd_scene format=3 uid="uid://c56wnv46jc35i"]
+
+[ext_resource type="Script" uid="uid://8xhoiixexue3" path="res://Scripts/Controllers/ScoreSceneController.gd" id="1_kinnm"]
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="2_42ghx"]
+[ext_resource type="Script" uid="uid://dy7g8f210bdpc" path="res://Scripts/GoToPlayerSelection.gd" id="3_5lcmk"]
+
+[node name="ScoreScene" type="Node2D" unique_id=2064956923 node_paths=PackedStringArray("scoreText", "playerNodes", "rankingPositions")]
+script = ExtResource("1_kinnm")
+scoreText = [NodePath("Puntuaciones/PuntuacionPrimeraPosicion"), NodePath("Puntuaciones/PuntuacionSegundaPosicion"), NodePath("Puntuaciones/PuntuacionTerceraPosicion"), NodePath("Puntuaciones/PuntuacionCuartaPosicion")]
+playerNodes = [NodePath("Players/Player1"), NodePath("Players/Player2"), NodePath("Players/Player3"), NodePath("Players/Player4")]
+rankingPositions = [NodePath("RankingsPositions/Posicion1"), NodePath("RankingsPositions/Posicion2"), NodePath("RankingsPositions/Posicion3"), NodePath("RankingsPositions/Posicion4")]
+
+[node name="Puntuaciones" type="Control" parent="." unique_id=1802907712]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PuntuacionPrimeraPosicion" type="Label" parent="Puntuaciones" unique_id=990713935]
+layout_mode = 0
+offset_left = 519.0
+offset_top = 161.0
+offset_right = 613.0
+offset_bottom = 184.0
+text = "Primero"
+
+[node name="PuntuacionSegundaPosicion" type="Label" parent="Puntuaciones" unique_id=1513580077]
+layout_mode = 0
+offset_left = 407.0
+offset_top = 201.0
+offset_right = 474.0
+offset_bottom = 224.0
+text = "Segundo"
+
+[node name="PuntuacionTerceraPosicion" type="Label" parent="Puntuaciones" unique_id=341102760]
+layout_mode = 0
+offset_left = 713.0
+offset_top = 256.0
+offset_right = 773.0
+offset_bottom = 279.0
+text = "Tercero"
+
+[node name="PuntuacionCuartaPosicion" type="Label" parent="Puntuaciones" unique_id=1728744505]
+layout_mode = 0
+offset_left = 316.0
+offset_top = 301.0
+offset_right = 369.0
+offset_bottom = 324.0
+text = "Cuarto"
+
+[node name="RankingsPositions" type="Node2D" parent="." unique_id=2005164120]
+
+[node name="Posicion1" type="Node2D" parent="RankingsPositions" unique_id=806466772]
+position = Vector2(552, 240)
+
+[node name="Posicion2" type="Node2D" parent="RankingsPositions" unique_id=1116459204]
+position = Vector2(444, 261)
+
+[node name="Posicion3" type="Node2D" parent="RankingsPositions" unique_id=1785131113]
+position = Vector2(744, 312)
+
+[node name="Posicion4" type="Node2D" parent="RankingsPositions" unique_id=2009810984]
+position = Vector2(346, 358)
+
+[node name="Players" type="Node2D" parent="." unique_id=1538588081]
+
+[node name="Player1" type="Sprite2D" parent="Players" unique_id=1150635008]
+modulate = Color(0.8980392, 0.30980393, 0.2901961, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_42ghx")
+
+[node name="Player2" type="Sprite2D" parent="Players" unique_id=1266629330]
+modulate = Color(0.16078432, 0.41568628, 0.76862746, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_42ghx")
+
+[node name="Player3" type="Sprite2D" parent="Players" unique_id=1876354176]
+modulate = Color(0.3254902, 0.654902, 0.29803923, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_42ghx")
+
+[node name="Player4" type="Sprite2D" parent="Players" unique_id=1346513983]
+modulate = Color(0.6745098, 0.65882355, 0.27450982, 1)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_42ghx")
+
+[node name="GoToPlayerSelectButton" type="Node" parent="." unique_id=1755527872]
+script = ExtResource("3_5lcmk")

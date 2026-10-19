@@ -19,7 +19,7 @@ winningXPosition = 940.0
 script = ExtResource("2_d8pki")
 players = [NodePath("Jugador1"), NodePath("Jugador2"), NodePath("Jugador3"), NodePath("Jugador4")]
 playersInitialXPosition = 100
-horizontalMovementPerClick = 25.0
+horizontalMovementPerClick = 100.0
 movementDuration = 0.15
 
 [node name="Jugador1" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=2088066266]

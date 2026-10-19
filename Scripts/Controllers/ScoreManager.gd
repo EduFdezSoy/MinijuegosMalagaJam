@@ -3,7 +3,6 @@ extends Node
 # El diccionario tiene: numero de jugador y puntuación
 var playerScores: Dictionary[int, int] = {}
 
-
 # Inicializa las puntuaciones de los jugadores de la partida
 func InitializeScores(jugadoresEnPartida: Array[int]) -> void:
 	playerScores.clear()
