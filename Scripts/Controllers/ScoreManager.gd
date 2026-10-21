@@ -44,3 +44,11 @@ func GetPlayersScoresInRanking() -> Dictionary[int, int]:
 		rankingDictionary[playerId] = sortedScores[playerId]
 
 	return rankingDictionary
+
+func GetHigherWins() -> int:
+	var higherWins: int = 0
+	for index in playerScores.size():
+		var playerId : int = playerScores.keys()[index]
+		if playerScores[playerId] > higherWins:
+			higherWins = playerScores[playerId]
+	return higherWins

@@ -5,7 +5,7 @@ class_name RoundController
 @export var availableMinigames: Array[PackedScene] = []
 
 # Cantidad de minijuegos que se jugarán en esta ronda
-@export_range(1, 100) var minigamesInTheRound: int = 5
+@export_range(1, 100) var winsNeededToFinish: int = 5
 
 # Las escenas de minijuegos que se jugarán en la ronda
 var scenesInRound: Array[PackedScene] = []
@@ -25,16 +25,12 @@ func CreateRound() -> void:
 		push_error("No hay minijuegos!")
 		return
 
-	if minigamesInTheRound > availableMinigames.size():
-		push_error("Has puesto más minijuegos en la ronda de los que hay disponibles")
-		return
-
 	# Creamos una copia para no cambiar la lista original
 	var shuffledMinigames: Array[PackedScene] = availableMinigames.duplicate()
 
 	shuffledMinigames.shuffle()
 
-	scenesInRound = shuffledMinigames.slice(0, minigamesInTheRound)
+	scenesInRound = shuffledMinigames
 
 	print("Ronda generada:")
 
@@ -43,9 +39,12 @@ func CreateRound() -> void:
 
 func NextMinigame() -> void:
 	currentMinigame += 1
+	if currentMinigame >= scenesInRound.size():
+		currentMinigame = 0
 
 func IsRoundFinish() -> bool:
-	return currentMinigame >= scenesInRound.size()
+	var maxWins: int = ScoreManager.GetHigherWins()
+	return maxWins >= winsNeededToFinish
 
 func GetCurrentMinigame() -> PackedScene:
 	return scenesInRound[currentMinigame]
