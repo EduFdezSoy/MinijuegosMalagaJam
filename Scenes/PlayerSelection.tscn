@@ -4,13 +4,12 @@
 [ext_resource type="Script" uid="uid://dqd747do6jri1" path="res://Scripts/PlayerButton.gd" id="2_2ny7y"]
 [ext_resource type="Script" uid="uid://cogkluld14x1i" path="res://Scripts/Controllers/RoundController.gd" id="4_2ny7y"]
 [ext_resource type="Script" uid="uid://c8xhspffwdh2y" path="res://Scripts/StartButton.gd" id="4_mpou1"]
-[ext_resource type="PackedScene" uid="uid://bymi3w6nfe84" path="res://Scenes/Minigames/Minijuego1.tscn" id="5_f0lok"]
-[ext_resource type="PackedScene" uid="uid://dqwl04r112a5b" path="res://Scenes/Minigames/Minijuego1Copia.tscn" id="6_y4jts"]
+[ext_resource type="PackedScene" uid="uid://cjrtfysm3veyl" path="res://Scenes/Minigames/Minijuego_A_Comer.tscn" id="5_f0lok"]
 
 [node name="PlayerSelection" type="Node2D" unique_id=1452936896]
 
 [node name="Player 1" type="Node2D" parent="." unique_id=1454617281]
-position = Vector2(250, 350)
+position = Vector2(250, 472)
 script = ExtResource("2_2ny7y")
 
 [node name="Sprite" type="Sprite2D" parent="Player 1" unique_id=1055041605]
@@ -19,7 +18,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 
 [node name="Player 2" type="Node2D" parent="." unique_id=1459564953]
-position = Vector2(471, 350)
+position = Vector2(471, 472)
 script = ExtResource("2_2ny7y")
 playerId = 2
 
@@ -30,7 +29,7 @@ texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
 
 [node name="Player 3" type="Node2D" parent="." unique_id=1279253964]
-position = Vector2(678, 350)
+position = Vector2(678, 472)
 script = ExtResource("2_2ny7y")
 playerId = 3
 
@@ -41,7 +40,7 @@ texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
 
 [node name="Player 4" type="Node2D" parent="." unique_id=1368542756]
-position = Vector2(900, 350)
+position = Vector2(900, 472)
 script = ExtResource("2_2ny7y")
 playerId = 4
 
@@ -56,7 +55,24 @@ script = ExtResource("4_mpou1")
 
 [node name="RoundController" type="Node" parent="." unique_id=1558029353]
 script = ExtResource("4_2ny7y")
-availableMinigames = Array[PackedScene]([ExtResource("5_f0lok"), ExtResource("6_y4jts")])
+availableMinigames = Array[PackedScene]([ExtResource("5_f0lok")])
 winsNeededToFinish = 2
 
 [node name="MinigameContainer" type="Node" parent="." unique_id=741273415]
+
+[node name="Label" type="Label" parent="." unique_id=1416738455]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 337.0
+offset_top = 167.0
+offset_right = 820.235
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 60
+text = "Pulsa un botón"
+horizontal_alignment = 1
+vertical_alignment = 1

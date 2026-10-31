@@ -38,10 +38,10 @@ func StartGame(playerMov: HorizontalPlayerMovement) -> void:
 	gameRunning = true
 	isLooking = false
 
-	_RunGameLoop()
+	RunGameLoop()
 
 
-func _RunGameLoop() -> void:
+func RunGameLoop() -> void:
 	while gameRunning:
 		# Fase 1: los jugadores pueden moverse.
 		isLooking = false
@@ -82,12 +82,12 @@ func _process(_delta: float) -> void:
 
 		# Comprobar si el jugador ha llegado a la meta.
 		if positions[index].x >= winningXPosition:
-			_FinishPlayer(playerId, true)
+			FinishPlayer(playerId, true)
 			continue
 
 		# Si el pollito está mirando, si alguien se mueve, se elimina
 		if isLooking and pendingTimes[index] > 0.0:
-			_FinishPlayer(playerId, false)
+			FinishPlayer(playerId, false)
 
 	# La partida termina cuando gana alguien o todos son eliminados
 	if (winners.size() >= 1) or eliminatedPlayers.size() >= playersInGame.size():
@@ -99,7 +99,7 @@ func _process(_delta: float) -> void:
 			gameFinished.emit(0)
 
 		
-func _FinishPlayer(playerId: int, won: bool) -> void:
+func FinishPlayer(playerId: int, won: bool) -> void:
 	var index: int = playerId - 1
 
 	if won:

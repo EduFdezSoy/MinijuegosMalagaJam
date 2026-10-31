@@ -1,9 +1,9 @@
 [gd_scene format=3 uid="uid://bymi3w6nfe84"]
 
 [ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_116ni"]
-[ext_resource type="Script" uid="uid://bfslgit2kd106" path="res://Scripts/Controllers/Minigames/Minigame 1/MinigameOne.gd" id="1_u5u0k"]
-[ext_resource type="Script" uid="uid://cxd8nyje6mpp0" path="res://Scripts/Controllers/Minigames/Minigame 1/HorizontalPlayerMovement.gd" id="2_d8pki"]
-[ext_resource type="Script" uid="uid://byav5nb6ppjh" path="res://Scripts/Controllers/Minigames/Minigame 1/PollitoInglesCheck.gd" id="2_yj3q8"]
+[ext_resource type="Script" uid="uid://bfslgit2kd106" path="res://Scripts/Minigames/Minigame 1/MinigameOne.gd" id="1_u5u0k"]
+[ext_resource type="Script" uid="uid://cxd8nyje6mpp0" path="res://Scripts/Minigames/Minigame 1/HorizontalPlayerMovement.gd" id="2_d8pki"]
+[ext_resource type="Script" uid="uid://byav5nb6ppjh" path="res://Scripts/Minigames/Minigame 1/PollitoInglesCheck.gd" id="2_yj3q8"]
 
 [node name="Minijuego1" type="Node2D" unique_id=1996787499 node_paths=PackedStringArray("playersHorizontalMove", "pollitoInglesCheck")]
 script = ExtResource("1_u5u0k")
