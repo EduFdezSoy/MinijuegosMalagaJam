@@ -9,6 +9,7 @@ func _process(_delta: float) -> void:
 		#Añadir espera para la transición
 		
 		InputController.GameInitialized = true
+		MinigamesController.StartMinigames()
 		SceneManager.LoadCurrentMinigame()
 		PlayersController.SetPlayerButtonsState(false)
 		

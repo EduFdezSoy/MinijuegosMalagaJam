@@ -1,6 +1,10 @@
 extends Node
 
 var roundController: RoundController
+signal MinigamesStarted
+
+func StartMinigames() -> void:
+	MinigamesStarted.emit()
 
 func StartMinigameController(roundC: RoundController) -> void:
 	roundController = roundC

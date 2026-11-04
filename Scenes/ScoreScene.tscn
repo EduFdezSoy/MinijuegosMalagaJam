@@ -10,57 +10,19 @@ scoreText = [NodePath("Puntuaciones/PuntuacionPrimeraPosicion"), NodePath("Puntu
 playerNodes = [NodePath("Players/Player1"), NodePath("Players/Player2"), NodePath("Players/Player3"), NodePath("Players/Player4")]
 rankingPositions = [NodePath("RankingsPositions/Posicion1"), NodePath("RankingsPositions/Posicion2"), NodePath("RankingsPositions/Posicion3"), NodePath("RankingsPositions/Posicion4")]
 
-[node name="Puntuaciones" type="Control" parent="." unique_id=1802907712]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="PuntuacionPrimeraPosicion" type="Label" parent="Puntuaciones" unique_id=990713935]
-layout_mode = 0
-offset_left = 519.0
-offset_top = 161.0
-offset_right = 613.0
-offset_bottom = 184.0
-text = "Primero"
-
-[node name="PuntuacionSegundaPosicion" type="Label" parent="Puntuaciones" unique_id=1513580077]
-layout_mode = 0
-offset_left = 407.0
-offset_top = 201.0
-offset_right = 474.0
-offset_bottom = 224.0
-text = "Segundo"
-
-[node name="PuntuacionTerceraPosicion" type="Label" parent="Puntuaciones" unique_id=341102760]
-layout_mode = 0
-offset_left = 713.0
-offset_top = 256.0
-offset_right = 773.0
-offset_bottom = 279.0
-text = "Tercero"
-
-[node name="PuntuacionCuartaPosicion" type="Label" parent="Puntuaciones" unique_id=1728744505]
-layout_mode = 0
-offset_left = 316.0
-offset_top = 301.0
-offset_right = 369.0
-offset_bottom = 324.0
-text = "Cuarto"
-
 [node name="RankingsPositions" type="Node2D" parent="." unique_id=2005164120]
 
 [node name="Posicion1" type="Node2D" parent="RankingsPositions" unique_id=806466772]
 position = Vector2(552, 240)
 
 [node name="Posicion2" type="Node2D" parent="RankingsPositions" unique_id=1116459204]
-position = Vector2(444, 261)
+position = Vector2(444, 285)
 
 [node name="Posicion3" type="Node2D" parent="RankingsPositions" unique_id=1785131113]
-position = Vector2(744, 312)
+position = Vector2(721, 339)
 
 [node name="Posicion4" type="Node2D" parent="RankingsPositions" unique_id=2009810984]
-position = Vector2(346, 358)
+position = Vector2(341, 410)
 
 [node name="Players" type="Node2D" parent="." unique_id=1538588081]
 
@@ -86,3 +48,53 @@ texture = ExtResource("2_42ghx")
 
 [node name="GoToPlayerSelectButton" type="Node" parent="." unique_id=1755527872]
 script = ExtResource("3_5lcmk")
+
+[node name="Puntuaciones" type="Control" parent="." unique_id=1802907712]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1148.0
+offset_bottom = 649.0
+
+[node name="PuntuacionPrimeraPosicion" type="Label" parent="Puntuaciones" unique_id=990713935]
+layout_mode = 0
+offset_left = 565.0
+offset_top = 169.0
+offset_right = 659.0
+offset_bottom = 222.0
+theme_override_font_sizes/font_size = 38
+text = "0"
+
+[node name="PuntuacionSegundaPosicion" type="Label" parent="Puntuaciones" unique_id=1513580077]
+layout_mode = 0
+offset_left = 454.0
+offset_top = 223.0
+offset_right = 521.0
+offset_bottom = 276.0
+theme_override_font_sizes/font_size = 38
+text = "0"
+
+[node name="PuntuacionTerceraPosicion" type="Label" parent="Puntuaciones" unique_id=341102760]
+layout_mode = 0
+offset_left = 732.0
+offset_top = 267.0
+offset_right = 792.0
+offset_bottom = 320.0
+theme_override_font_sizes/font_size = 38
+text = "0"
+
+[node name="PuntuacionCuartaPosicion" type="Label" parent="Puntuaciones" unique_id=1728744505]
+layout_mode = 0
+offset_left = 353.0
+offset_top = 347.0
+offset_right = 406.0
+offset_bottom = 400.0
+theme_override_font_sizes/font_size = 38
+text = "0"
+
+[node name="Label" type="Label" parent="." unique_id=1970101599]
+offset_left = 195.0
+offset_top = 24.0
+offset_right = 944.0
+offset_bottom = 74.0
+theme_override_font_sizes/font_size = 36
+text = "Pulsa Espacio para volver al menu principal"

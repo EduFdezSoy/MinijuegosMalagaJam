@@ -190,23 +190,24 @@ texture = ExtResource("6_0vj75")
 
 [node name="Patatas" type="Sprite2D" parent="FoodButtons" unique_id=1944868995]
 modulate = Color(0.9211309, 0.8254837, 0.53299534, 1)
-position = Vector2(137.99998, 324.99997)
+position = Vector2(-228.99995, 344)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_upu7b")
 
 [node name="Palmera" type="Sprite2D" parent="FoodButtons" unique_id=1054930493]
 modulate = Color(0.50075865, 0.2537226, 0.17330572, 1)
-position = Vector2(317.99997, 293.99997)
+position = Vector2(-150.99994, 191.00003)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_upu7b")
 
 [node name="Tortelinis" type="Sprite2D" parent="FoodButtons" unique_id=1184989913]
 modulate = Color(0.3210476, 0.69119173, 0.439041, 1)
-position = Vector2(69.99999, 98.99999)
+position = Vector2(-253.99997, 240.99997)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_upu7b")
 
 [node name="Pizza" type="Sprite2D" parent="FoodButtons" unique_id=1821137202]
 modulate = Color(0.7266658, 0.24940369, 0.3048025, 1)
+position = Vector2(-293.99997, 146.99998)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_upu7b")
