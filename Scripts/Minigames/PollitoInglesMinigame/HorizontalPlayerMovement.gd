@@ -14,7 +14,7 @@ func SetPlayersPosition(activePlayers: Array[int]) -> void:
 	
 
 func MovePlayer(id: int) -> void:
-	var index: int = id - 1
+	var index: int = id
 
 	if index < 0 or index >= players.size():
 		return
@@ -36,18 +36,11 @@ func MovePlayersToCurrentPosition(delta: float) -> void:
 		if pendingMovementTime[playerNumber] <= 0.0:
 			continue
 
-		var timeToMove: float = minf(
-			delta,
-			pendingMovementTime[playerNumber]
-		)
+		var timeToMove: float = minf(delta,pendingMovementTime[playerNumber])
 
 		var distanceToMove: float = movementSpeed * timeToMove
 
-		players[playerNumber].position.x = move_toward(
-			players[playerNumber].position.x,
-			playersPositions[playerNumber].x,
-			distanceToMove
-		)
+		players[playerNumber].position.x = move_toward(players[playerNumber].position.x,playersPositions[playerNumber].x,distanceToMove)
 
 		pendingMovementTime[playerNumber] -= timeToMove
 
@@ -69,7 +62,7 @@ func InitializePlayersPositions(playersNumber:int) -> void:
 	pendingMovementTime.fill(0.0)
 
 	for player in range(players.size()):
-		if activePlayersInGame.has(player + 1):
+		if activePlayersInGame.has(player):
 			players[player].show()
 			players[player].position = Vector2(screenXPosition,screenYPosition)
 			screenYPosition += playerScreenSize

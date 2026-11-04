@@ -1,6 +1,8 @@
 extends Node2D
 class_name PlayerButton
 
+@export var buttonColor : Color
+@export var buttonSprite : Sprite2D
 @export_range(0,3) var playerId: int = 0
 var playerSelected: bool = false
 var buttonState: bool = true
@@ -33,8 +35,9 @@ func PlayerButtonPressed() -> void:
 	if(not playerSelected):
 		PlayersController.PlayerSelect(playerId)
 		playerSelected = true
-		var target_scale = Vector2(1.2, 1.2) 
-		scale = target_scale
+		var target_scale = Vector2(0.4, 0.4) 
+		buttonSprite.scale = target_scale
+		buttonSprite.modulate = buttonColor
 		print("Jugador ",playerId, " ha pulsado el botón en el inicio")
 	else:
 		print("Jugador ",playerId, " ha pulsado el botón en el inicio")

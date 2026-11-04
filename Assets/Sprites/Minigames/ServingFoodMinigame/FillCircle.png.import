@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfb5xuyyt1aw"
-path="res://.godot/imported/CruzRoja.png-bcb792f0e197045ee5f071bff534e248.ctex"
+uid="uid://doaea01dvkkww"
+path="res://.godot/imported/FillCircle.png-d4990c9f3a57ea0b5c104ac1eb4a7aae.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Minigames/ServingFoodMinigame/CruzRoja.png"
-dest_files=["res://.godot/imported/CruzRoja.png-bcb792f0e197045ee5f071bff534e248.ctex"]
+source_file="res://Assets/Sprites/Minigames/ServingFoodMinigame/FillCircle.png"
+dest_files=["res://.godot/imported/FillCircle.png-d4990c9f3a57ea0b5c104ac1eb4a7aae.ctex"]
 
 [params]
 

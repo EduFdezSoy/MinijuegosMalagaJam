@@ -1,14 +1,14 @@
 [gd_scene format=3 uid="uid://cjrtfysm3veyl"]
 
-[ext_resource type="Script" uid="uid://cwgtrohnmnv21" path="res://Scripts/Minigames/Minijuego_A_Comer/MinigameLunchTime.gd" id="1_8oyy2"]
-[ext_resource type="Script" uid="uid://dulxaqsgd7jgj" path="res://Scripts/Minigames/Minijuego_A_Comer/FoodChecker.gd" id="2_n2y3l"]
-[ext_resource type="Script" uid="uid://c5i20f1q8e62p" path="res://Scripts/Minigames/Minijuego_A_Comer/PeopleLine.gd" id="3_0vj75"]
-[ext_resource type="Script" uid="uid://bkkhqthwrw70d" path="res://Scripts/Minigames/Minijuego_A_Comer/IncrementalCountDown.gd" id="3_i8n31"]
+[ext_resource type="Script" uid="uid://cwgtrohnmnv21" path="res://Scripts/Minigames/ServingFoodMinigame/MinigameLunchTime.gd" id="1_8oyy2"]
+[ext_resource type="Script" uid="uid://dulxaqsgd7jgj" path="res://Scripts/Minigames/ServingFoodMinigame/FoodChecker.gd" id="2_n2y3l"]
+[ext_resource type="Script" uid="uid://c5i20f1q8e62p" path="res://Scripts/Minigames/ServingFoodMinigame/PeopleLine.gd" id="3_0vj75"]
+[ext_resource type="Script" uid="uid://bkkhqthwrw70d" path="res://Scripts/Minigames/ServingFoodMinigame/IncrementalCountDown.gd" id="3_i8n31"]
 [ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="4_upu7b"]
-[ext_resource type="Script" uid="uid://duyvboy7v2ung" path="res://Scripts/Minigames/Minijuego_A_Comer/MinigameActionButton.gd" id="5_n2y3l"]
-[ext_resource type="Texture2D" uid="uid://cy2hibh5s7vpg" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/Circulo.png" id="5_r4lmr"]
-[ext_resource type="Texture2D" uid="uid://bfb5xuyyt1aw" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/CruzRoja.png" id="6_0vj75"]
-[ext_resource type="Texture2D" uid="uid://doaea01dvkkww" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/CirculoBlanco.png" id="6_hw2q6"]
+[ext_resource type="Script" uid="uid://duyvboy7v2ung" path="res://Scripts/Minigames/ServingFoodMinigame/MinigameActionButton.gd" id="5_n2y3l"]
+[ext_resource type="Texture2D" uid="uid://cy2hibh5s7vpg" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/CircleBackground.png" id="5_r4lmr"]
+[ext_resource type="Texture2D" uid="uid://bfb5xuyyt1aw" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/RedCross.png" id="6_0vj75"]
+[ext_resource type="Texture2D" uid="uid://doaea01dvkkww" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/FillCircle.png" id="6_hw2q6"]
 
 [node name="MinijuegoAComer" type="Node2D" unique_id=249033107 node_paths=PackedStringArray("foodChecker")]
 script = ExtResource("1_8oyy2")

@@ -4,48 +4,57 @@
 [ext_resource type="Script" uid="uid://dqd747do6jri1" path="res://Scripts/PlayerButton.gd" id="2_2ny7y"]
 [ext_resource type="Script" uid="uid://cogkluld14x1i" path="res://Scripts/Controllers/RoundController.gd" id="4_2ny7y"]
 [ext_resource type="Script" uid="uid://c8xhspffwdh2y" path="res://Scripts/StartButton.gd" id="4_mpou1"]
-[ext_resource type="PackedScene" uid="uid://cjrtfysm3veyl" path="res://Scenes/Minigames/Minijuego_A_Comer.tscn" id="5_f0lok"]
+[ext_resource type="PackedScene" uid="uid://cjrtfysm3veyl" path="res://Scenes/Minigames/ServingFoodMinigame.tscn" id="5_f0lok"]
+[ext_resource type="PackedScene" uid="uid://bymi3w6nfe84" path="res://Scenes/Minigames/MinigameTest.tscn" id="6_y4jts"]
 
 [node name="PlayerSelection" type="Node2D" unique_id=1452936896]
 
-[node name="Player 1" type="Node2D" parent="." unique_id=1454617281]
+[node name="Player 1" type="Node2D" parent="." unique_id=1454617281 node_paths=PackedStringArray("buttonSprite")]
 position = Vector2(250, 472)
 script = ExtResource("2_2ny7y")
+buttonColor = Color(0.8156863, 0.28235295, 0.3372549, 1)
+buttonSprite = NodePath("Sprite")
 
 [node name="Sprite" type="Sprite2D" parent="Player 1" unique_id=1055041605]
-modulate = Color(0.8137784, 0.28282133, 0.33851078, 1)
+modulate = Color(0.5071507, 0.4880826, 0.44954228, 1)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 
-[node name="Player 2" type="Node2D" parent="." unique_id=1459564953]
+[node name="Player 2" type="Node2D" parent="." unique_id=1459564953 node_paths=PackedStringArray("buttonSprite")]
 position = Vector2(471, 472)
 script = ExtResource("2_2ny7y")
+buttonColor = Color(0.16078432, 0.41568628, 0.76862746, 1)
+buttonSprite = NodePath("Sprite")
 playerId = 1
 
 [node name="Sprite" type="Sprite2D" parent="Player 2" unique_id=608958459]
-modulate = Color(0.15899232, 0.4149546, 0.7680975, 1)
+modulate = Color(0.5071507, 0.4880826, 0.44954228, 1)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
 
-[node name="Player 3" type="Node2D" parent="." unique_id=1279253964]
+[node name="Player 3" type="Node2D" parent="." unique_id=1279253964 node_paths=PackedStringArray("buttonSprite")]
 position = Vector2(678, 472)
 script = ExtResource("2_2ny7y")
+buttonColor = Color(0.3254902, 0.654902, 0.29803923, 1)
+buttonSprite = NodePath("Sprite")
 playerId = 2
 
 [node name="Sprite" type="Sprite2D" parent="Player 3" unique_id=1110995948]
-modulate = Color(0.32677108, 0.65325326, 0.29733875, 1)
+modulate = Color(0.5071507, 0.4880826, 0.44954228, 1)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
 
-[node name="Player 4" type="Node2D" parent="." unique_id=1368542756]
+[node name="Player 4" type="Node2D" parent="." unique_id=1368542756 node_paths=PackedStringArray("buttonSprite")]
 position = Vector2(900, 472)
 script = ExtResource("2_2ny7y")
+buttonColor = Color(0.6745098, 0.65882355, 0.27450982, 1)
+buttonSprite = NodePath("Sprite")
 playerId = 3
 
 [node name="Sprite" type="Sprite2D" parent="Player 4" unique_id=158976496]
-modulate = Color(0.67444205, 0.6570362, 0.27338254, 1)
+modulate = Color(0.5071507, 0.4880826, 0.44954228, 1)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
@@ -55,7 +64,7 @@ script = ExtResource("4_mpou1")
 
 [node name="RoundController" type="Node" parent="." unique_id=1558029353]
 script = ExtResource("4_2ny7y")
-availableMinigames = Array[PackedScene]([ExtResource("5_f0lok")])
+availableMinigames = Array[PackedScene]([ExtResource("5_f0lok"), ExtResource("6_y4jts")])
 winsNeededToFinish = 2
 
 [node name="MinigameContainer" type="Node" parent="." unique_id=741273415]
@@ -73,6 +82,6 @@ offset_bottom = 316.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
-text = "Pulsa un botón"
+text = "Pulsa un botón para unirte"
 horizontal_alignment = 1
 vertical_alignment = 1

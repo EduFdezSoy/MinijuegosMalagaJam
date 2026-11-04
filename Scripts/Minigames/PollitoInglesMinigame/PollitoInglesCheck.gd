@@ -46,9 +46,7 @@ func RunGameLoop() -> void:
 		# Fase 1: los jugadores pueden moverse.
 		isLooking = false
 		spriteCheck.modulate = Color.GREEN
-		await get_tree().create_timer(
-			randf_range(minMovementTime, maxMovementTime)
-		).timeout
+		await get_tree().create_timer(randf_range(minMovementTime, maxMovementTime)).timeout
 
 		if not gameRunning:
 			return
@@ -56,9 +54,7 @@ func RunGameLoop() -> void:
 		# Fase 2: el pollito está mirando.
 		isLooking = true
 		spriteCheck.modulate = Color.RED
-		await get_tree().create_timer(
-			randf_range(minLookingTime, maxLookingTime)
-		).timeout
+		await get_tree().create_timer(randf_range(minLookingTime, maxLookingTime)).timeout
 
 		if not gameRunning:
 			return
@@ -75,7 +71,7 @@ func _process(_delta: float) -> void:
 		if winners.has(playerId) or eliminatedPlayers.has(playerId):
 			continue
 
-		var index: int = playerId - 1
+		var index: int = playerId
 
 		if index < 0 or index >= positions.size():
 			continue
@@ -100,7 +96,7 @@ func _process(_delta: float) -> void:
 
 		
 func FinishPlayer(playerId: int, won: bool) -> void:
-	var index: int = playerId - 1
+	var index: int = playerId
 
 	if won:
 		winners.append(playerId)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cy2hibh5s7vpg"
-path="res://.godot/imported/Circulo.png-27b81ad5bf3aa8364b9c2210c0ee488d.ctex"
+path="res://.godot/imported/CircleBackground.png-764ed6b011013a6144fb3c42d448a1ec.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Minigames/ServingFoodMinigame/Circulo.png"
-dest_files=["res://.godot/imported/Circulo.png-27b81ad5bf3aa8364b9c2210c0ee488d.ctex"]
+source_file="res://Assets/Sprites/Minigames/ServingFoodMinigame/CircleBackground.png"
+dest_files=["res://.godot/imported/CircleBackground.png-764ed6b011013a6144fb3c42d448a1ec.ctex"]
 
 [params]
 
