@@ -6,6 +6,7 @@ class_name FoodChecker
 var food : Dictionary[String,int] = {"Patatas"=0,"Palmera"=1,"Tortelini"=2,"Pizza"=3}
 # Representa el id de jugador y su comida asignada
 var currentFoodAvailableForPlayers: Dictionary[int,String]
+@export var countDown : IncrementalCountDown
 
 @export var foodSprites : Array[Node2D]
 
@@ -21,23 +22,49 @@ func Initialize(miniGame: MinigameLunchTime) -> void:
 	actionButtons.SetButtonSprites(currentFoodAvailableForPlayers,food)
 	SetNextFood()
 	peopleLine.Initialize()
+	countDown.StartCountDown()
+	countDown.CountDownFinished.connect(TimeIsUp)
 
-func PlayerPressedButton(playerId: int) -> bool:
+func TimeIsUp() -> void:
+	var playerIdEliminated : int
+	for playerId in currentFoodAvailableForPlayers.keys():
+		if(currentFoodAvailableForPlayers[playerId] == nextFood):
+			playerIdEliminated = playerId
+	
+	DeletePlayer(playerIdEliminated)
+	if(currentFoodAvailableForPlayers.size() > 1):
+		ShowNextFood()
+		await get_tree().create_timer(0.5).timeout
+		countDown.NextCountDown()
+
+func PlayerPressedButton(playerId: int) -> void:
+	if(not currentFoodAvailableForPlayers.has(playerId)):
+		return 
 	print("Player ",playerId," send: ",currentFoodAvailableForPlayers[playerId], " next food is: ",nextFood)
 	if(currentFoodAvailableForPlayers[playerId] == nextFood):
 		#Sonidito y efecto de acierto
 		ShowNextFood()
-		return true
+		countDown.StopCountDown()
+		await get_tree().create_timer(0.5).timeout
+		if currentFoodAvailableForPlayers.size() > 1:
+			countDown.NextCountDown()
 	else:
-		#Sonidito y efecto de error
+		DeletePlayer(playerId)
+		if(currentFoodAvailableForPlayers.size() <= 1):
+			countDown.StopCountDown()
+		
+
+func IsPlayerEliminated(playerId : int) -> bool:
+	return currentFoodAvailableForPlayers.has(playerId)
+
+func DeletePlayer(playerId: int) -> void:
+	#Sonidito y efecto de error
 		actionButtons.DeletePlayer(playerId,food[currentFoodAvailableForPlayers[playerId]])
 		RemovePlayer(playerId)
 		if currentFoodAvailableForPlayers.size() == 1:
 			print("SE ACABÓ")
 			miniGameLunchTime.GameEnded(currentFoodAvailableForPlayers.keys()[0]+1)
-		return false
-
-
+		
 func ShowNextFood() -> void:
 	HideSprites()
 	nextFood = ""

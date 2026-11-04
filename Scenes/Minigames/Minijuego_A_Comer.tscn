@@ -3,9 +3,12 @@
 [ext_resource type="Script" uid="uid://cwgtrohnmnv21" path="res://Scripts/Minigames/Minijuego_A_Comer/MinigameLunchTime.gd" id="1_8oyy2"]
 [ext_resource type="Script" uid="uid://dulxaqsgd7jgj" path="res://Scripts/Minigames/Minijuego_A_Comer/FoodChecker.gd" id="2_n2y3l"]
 [ext_resource type="Script" uid="uid://c5i20f1q8e62p" path="res://Scripts/Minigames/Minijuego_A_Comer/PeopleLine.gd" id="3_0vj75"]
+[ext_resource type="Script" uid="uid://bkkhqthwrw70d" path="res://Scripts/Minigames/Minijuego_A_Comer/IncrementalCountDown.gd" id="3_i8n31"]
 [ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="4_upu7b"]
 [ext_resource type="Script" uid="uid://duyvboy7v2ung" path="res://Scripts/Minigames/Minijuego_A_Comer/MinigameActionButton.gd" id="5_n2y3l"]
+[ext_resource type="Texture2D" uid="uid://cy2hibh5s7vpg" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/Circulo.png" id="5_r4lmr"]
 [ext_resource type="Texture2D" uid="uid://bfb5xuyyt1aw" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/CruzRoja.png" id="6_0vj75"]
+[ext_resource type="Texture2D" uid="uid://doaea01dvkkww" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/CirculoBlanco.png" id="6_hw2q6"]
 
 [node name="MinijuegoAComer" type="Node2D" unique_id=249033107 node_paths=PackedStringArray("foodChecker")]
 script = ExtResource("1_8oyy2")
@@ -23,11 +26,17 @@ position = Vector2(54, 206)
 [node name="BeforeLinePosition" type="Node2D" parent="." unique_id=709121406]
 position = Vector2(-84, 206)
 
-[node name="FoodChecker" type="Node" parent="." unique_id=598215589 node_paths=PackedStringArray("peopleLine", "actionButtons", "foodSprites")]
+[node name="FoodChecker" type="Node" parent="." unique_id=598215589 node_paths=PackedStringArray("peopleLine", "actionButtons", "countDown", "foodSprites")]
 script = ExtResource("2_n2y3l")
 peopleLine = NodePath("../PeopleLine")
 actionButtons = NodePath("../FoodButtons")
+countDown = NodePath("CountDown")
 foodSprites = [NodePath("PatatasSprite"), NodePath("PalmeraSprite"), NodePath("TorteliniSprite"), NodePath("PizzaSprite")]
+
+[node name="CountDown" type="Node" parent="FoodChecker" unique_id=1181019987 node_paths=PackedStringArray("progress")]
+script = ExtResource("3_i8n31")
+initialCountDownTime = 2.0
+progress = NodePath("../TextureProgressBar")
 
 [node name="PatatasSprite" type="Sprite2D" parent="FoodChecker" unique_id=1433409565]
 modulate = Color(0.92156863, 0.8235294, 0.53333336, 1)
@@ -52,6 +61,17 @@ modulate = Color(0.7254902, 0.2509804, 0.30588236, 1)
 position = Vector2(844.2, 244.2)
 scale = Vector2(0.2, 0.2)
 texture = ExtResource("4_upu7b")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="FoodChecker" unique_id=233113909]
+offset_left = 695.0
+offset_top = 116.0
+offset_right = 1207.0
+offset_bottom = 628.0
+scale = Vector2(0.5, 0.5)
+step = 0.2
+fill_mode = 4
+texture_under = ExtResource("5_r4lmr")
+texture_progress = ExtResource("6_hw2q6")
 
 [node name="PeopleLine" type="Node" parent="." unique_id=2019209986 node_paths=PackedStringArray("firstInLinePosition", "lastInLinePosition", "secondInLinePosition", "beforeLinePosition", "peopleSprites")]
 script = ExtResource("3_0vj75")

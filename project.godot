@@ -26,6 +26,7 @@ ScoreManager="*uid://cucqf4fe5tdj3"
 InputController="*uid://tl65glayk1rn"
 PlayersController="*uid://dq3x1iskvffgi"
 MinigamesController="*uid://dp5jlxjjmk7e7"
+TweenAnimator="*uid://ly11a11xga2s"
 
 [display]
 

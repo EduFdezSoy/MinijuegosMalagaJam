@@ -15,14 +15,15 @@ func SetButtonSprites(playerFoods: Dictionary[int,String], foodIndex: Dictionary
 			var foodSpriteIndex = foodIndex[playerFoods[index]]
 			buttonSprites[index].show()
 			buttonFoodSprites[foodSpriteIndex].show()
-			var position = playerButtonPosition[index].position
+			var position = playerButtonPosition[index].global_position
 			buttonRedCross[index].hide()
-			buttonSprites[index].position = position
-			buttonRedCross[index].position = position
-			buttonFoodSprites[foodSpriteIndex].position = position
+			buttonSprites[index].global_position = position
+			buttonRedCross[index].global_position = position
+			buttonFoodSprites[foodSpriteIndex].global_position = position
 			
 
 func DeletePlayer(playerId : int, foodId: int) -> void:
+	TweenAnimator.ShakeSprite(buttonSprites[playerId])
 	buttonSprites[playerId].modulate = playerEliminatedColor
 	buttonRedCross[playerId].show()
 	buttonFoodSprites[foodId].hide()
