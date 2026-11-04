@@ -1,7 +1,7 @@
 extends Node2D
 class_name PlayerButton
 
-@export_range(1,4) var playerId: int = 1
+@export_range(0,3) var playerId: int = 0
 var playerSelected: bool = false
 var buttonState: bool = true
 

@@ -14,7 +14,7 @@ func GameEnded(winner:int)-> void:
 	
 
 func OnPlayerPressed(playerId: int) -> void:
-	foodChecker.PlayerPressedButton(playerId-1)
-	if not foodChecker.IsPlayerEliminated(playerId-1):
+	foodChecker.PlayerPressedButton(playerId)
+	if not foodChecker.IsPlayerEliminated(playerId):
 		activePlayerIds.erase(playerId)
 		

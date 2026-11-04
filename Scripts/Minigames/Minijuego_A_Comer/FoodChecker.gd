@@ -63,7 +63,7 @@ func DeletePlayer(playerId: int) -> void:
 		RemovePlayer(playerId)
 		if currentFoodAvailableForPlayers.size() == 1:
 			print("SE ACABÓ")
-			miniGameLunchTime.GameEnded(currentFoodAvailableForPlayers.keys()[0]+1)
+			miniGameLunchTime.GameEnded(currentFoodAvailableForPlayers.keys()[0])
 		
 func ShowNextFood() -> void:
 	HideSprites()
@@ -97,7 +97,7 @@ func SetRandomFoodToPlayers() -> Dictionary[int,String]:
 	var foodDictionary : Dictionary[int,String]
 	
 	for index in playersIds.size():
-		foodDictionary.set(playersIds[index]-1,shuffledFood[index])
-		print("Jugador ",playersIds[index]-1," tiene ", shuffledFood[index])
+		foodDictionary.set(playersIds[index],shuffledFood[index])
+		print("Jugador ",playersIds[index]," tiene ", shuffledFood[index])
 	
 	return foodDictionary

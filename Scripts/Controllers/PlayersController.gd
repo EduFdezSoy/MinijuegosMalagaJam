@@ -11,18 +11,18 @@ func Initialize() -> void:
 	SetPlayerButtonsState(true)
 
 func PlayerSelect(playerId: int) -> void:
-	var index = playerId -1
+	
 	#Para evitar que le lleguen jugadores que no son validos
-	if(index < 0 or index >= activePlayers.size()):
+	if(playerId < 0 or playerId >= activePlayers.size()):
 		return
 	
 	#En caso de que ya se haya seleccionado este jugador, return
-	if(activePlayers[index]):
+	if(activePlayers[playerId]):
 		return
 		
-	activePlayers[index] = true;
+	activePlayers[playerId] = true;
 	activePlayerCount+=1
-	print("Jugador %d se ha unido" % index)
+	print("Jugador %d se ha unido" % playerId)
 
 func SetPlayerButtonsState(state:bool) -> void:
 	PlayerSelectionChangeState.emit(state)
@@ -36,6 +36,6 @@ func GetCurrentPlayersIds() -> Array[int]:
 	var playerIds: Array[int] = []
 	for playerId in activePlayers.size():
 		if(activePlayers[playerId]):
-			playerIds.append(playerId + 1)
+			playerIds.append(playerId)
 
 	return playerIds;

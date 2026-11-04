@@ -16,8 +16,8 @@ func SetRankingTexts() -> void:
 
 	for positions in rankings.size():
 		var playerId = rankings.keys()[positions]
-		playerNodes[playerId-1].show()
-		playerNodes[playerId-1].position = rankingPositions[positions].position
+		playerNodes[playerId].show()
+		playerNodes[playerId].position = rankingPositions[positions].position
 		scoreText[positions].text = str(rankings[playerId])
 
 func ResetRankingInfo() -> void:
