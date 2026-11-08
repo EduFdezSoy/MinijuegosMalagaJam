@@ -1,131 +1,152 @@
 [gd_scene format=3 uid="uid://cjrtfysm3veyl"]
 
-[ext_resource type="Script" uid="uid://cwgtrohnmnv21" path="res://Scripts/Minigames/ServingFoodMinigame/MinigameLunchTime.gd" id="1_8oyy2"]
-[ext_resource type="Script" uid="uid://dulxaqsgd7jgj" path="res://Scripts/Minigames/ServingFoodMinigame/FoodChecker.gd" id="2_n2y3l"]
-[ext_resource type="Script" uid="uid://c5i20f1q8e62p" path="res://Scripts/Minigames/ServingFoodMinigame/PeopleLine.gd" id="3_0vj75"]
-[ext_resource type="Script" uid="uid://bkkhqthwrw70d" path="res://Scripts/Minigames/ServingFoodMinigame/IncrementalCountDown.gd" id="3_i8n31"]
-[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="4_upu7b"]
-[ext_resource type="Script" uid="uid://duyvboy7v2ung" path="res://Scripts/Minigames/ServingFoodMinigame/MinigameActionButton.gd" id="5_n2y3l"]
-[ext_resource type="Texture2D" uid="uid://cy2hibh5s7vpg" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/CircleBackground.png" id="5_r4lmr"]
-[ext_resource type="Texture2D" uid="uid://bfb5xuyyt1aw" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/RedCross.png" id="6_0vj75"]
-[ext_resource type="Texture2D" uid="uid://doaea01dvkkww" path="res://Assets/Sprites/Minigames/ServingFoodMinigame/FillCircle.png" id="6_hw2q6"]
+[ext_resource type="Script" uid="uid://cwgtrohnmnv21" path="res://Minigames/ServingFoodMinigame/Scripts/MinigameLunchTime.gd" id="1_jx185"]
+[ext_resource type="Resource" uid="uid://dxf84l2io7jxy" path="res://Minigames/ServingFoodMinigame/Scripts/ServingFoodData.tres" id="2_d3aln"]
+[ext_resource type="Script" uid="uid://dulxaqsgd7jgj" path="res://Minigames/ServingFoodMinigame/Scripts/FoodChecker.gd" id="3_rg8dv"]
+[ext_resource type="Script" uid="uid://bkkhqthwrw70d" path="res://Minigames/ServingFoodMinigame/Scripts/IncrementalCountDown.gd" id="4_unlj4"]
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Sprites/GenericButton.png" id="4_upu7b"]
+[ext_resource type="Texture2D" uid="uid://cy2hibh5s7vpg" path="res://Minigames/ServingFoodMinigame/Sprites/CircleBackground.png" id="5_r4lmr"]
+[ext_resource type="Texture2D" uid="uid://bfb5xuyyt1aw" path="res://Minigames/ServingFoodMinigame/Sprites/RedCross.png" id="6_0vj75"]
+[ext_resource type="Texture2D" uid="uid://doaea01dvkkww" path="res://Minigames/ServingFoodMinigame/Sprites/FillCircle.png" id="6_hw2q6"]
+[ext_resource type="Script" uid="uid://c5i20f1q8e62p" path="res://Minigames/ServingFoodMinigame/Scripts/PeopleLine.gd" id="8_ev5mx"]
+[ext_resource type="Texture2D" uid="uid://cmqnh41jwo37o" path="res://Minigames/ServingFoodMinigame/Sprites/PJ1PH.png" id="9_0es2j"]
+[ext_resource type="Script" uid="uid://duyvboy7v2ung" path="res://Minigames/ServingFoodMinigame/Scripts/MinigameActionButton.gd" id="9_jcifq"]
+[ext_resource type="Texture2D" uid="uid://b5liyik5tl2ws" path="res://Minigames/ServingFoodMinigame/Sprites/PJ2PH.png" id="10_5ff0f"]
+[ext_resource type="Texture2D" uid="uid://byqiiikvwu4gr" path="res://Minigames/ServingFoodMinigame/Sprites/PJ3PH.png" id="11_2lcyo"]
+[ext_resource type="Texture2D" uid="uid://c362yh5aeibe5" path="res://Minigames/ServingFoodMinigame/Sprites/PJ4PH.png" id="12_ta1sm"]
+[ext_resource type="Texture2D" uid="uid://cu52n2irxdu7i" path="res://Minigames/ServingFoodMinigame/Sprites/PJ5PH.png" id="13_c262d"]
+[ext_resource type="Texture2D" uid="uid://cuokq8crt273j" path="res://Minigames/ServingFoodMinigame/Sprites/PJ6PH.png" id="14_l7nwt"]
+[ext_resource type="Texture2D" uid="uid://c32cuwy068en" path="res://Minigames/ServingFoodMinigame/Sprites/PatatasPlaceHolder.png" id="17_c262d"]
+[ext_resource type="Texture2D" uid="uid://cd8bduxavhjc1" path="res://Minigames/ServingFoodMinigame/Sprites/PalmeraPlaceHolder.png" id="18_l7nwt"]
+[ext_resource type="Texture2D" uid="uid://dwughx2ed4046" path="res://Minigames/ServingFoodMinigame/Sprites/TorteliniPlaceHolder.png" id="19_m551s"]
+[ext_resource type="Texture2D" uid="uid://tokfj8ql88d3" path="res://Minigames/ServingFoodMinigame/Sprites/PizzaPlaceHolder.png" id="20_ngq0v"]
 
 [node name="MinijuegoAComer" type="Node2D" unique_id=249033107 node_paths=PackedStringArray("foodChecker")]
-script = ExtResource("1_8oyy2")
+script = ExtResource("1_jx185")
 foodChecker = NodePath("FoodChecker")
+minigameData = ExtResource("2_d3aln")
 
 [node name="FirstPosition" type="Node2D" parent="." unique_id=823751089]
-position = Vector2(553, 300)
+position = Vector2(932, 565)
 
 [node name="SecondPosition" type="Node2D" parent="." unique_id=1522578228]
-position = Vector2(428, 206)
+position = Vector2(625, 303)
 
 [node name="LastPosition" type="Node2D" parent="." unique_id=1294708112]
-position = Vector2(54, 206)
+position = Vector2(54, 303)
 
 [node name="BeforeLinePosition" type="Node2D" parent="." unique_id=709121406]
-position = Vector2(-84, 206)
+position = Vector2(-84, 303)
 
-[node name="FoodChecker" type="Node" parent="." unique_id=598215589 node_paths=PackedStringArray("peopleLine", "actionButtons", "countDown", "foodSprites")]
-script = ExtResource("2_n2y3l")
+[node name="FoodChecker" type="Node" parent="." unique_id=598215589 node_paths=PackedStringArray("peopleLine", "actionButtons", "countDown", "foodSprites", "failOrSuccessColorRect")]
+script = ExtResource("3_rg8dv")
 peopleLine = NodePath("../PeopleLine")
 actionButtons = NodePath("../FoodButtons")
 countDown = NodePath("CountDown")
 foodSprites = [NodePath("PatatasSprite"), NodePath("PalmeraSprite"), NodePath("TorteliniSprite"), NodePath("PizzaSprite")]
+failOrSuccessColorRect = NodePath("ColorRect")
+successColor = Color(0.40114012, 0.78016233, 0.48454028, 1)
+failColor = Color(0.93, 0.111600004, 0.15252015, 1)
 
 [node name="CountDown" type="Node" parent="FoodChecker" unique_id=1181019987 node_paths=PackedStringArray("progress")]
-script = ExtResource("3_i8n31")
+script = ExtResource("4_unlj4")
 initialCountDownTime = 2.0
 progress = NodePath("../TextureProgressBar")
 
 [node name="PatatasSprite" type="Sprite2D" parent="FoodChecker" unique_id=1433409565]
-modulate = Color(0.92156863, 0.8235294, 0.53333336, 1)
-position = Vector2(832.2, 234.2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(1337, 335)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("17_c262d")
 
 [node name="PalmeraSprite" type="Sprite2D" parent="FoodChecker" unique_id=1468121680]
-modulate = Color(0.5019608, 0.25490198, 0.17254902, 1)
-position = Vector2(803.2, 232.2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(1337, 335)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("18_l7nwt")
 
 [node name="TorteliniSprite" type="Sprite2D" parent="FoodChecker" unique_id=324615145]
-modulate = Color(0.32156864, 0.6901961, 0.4392157, 1)
-position = Vector2(826.2, 255.2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(1337, 335)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("19_m551s")
 
 [node name="PizzaSprite" type="Sprite2D" parent="FoodChecker" unique_id=1044735880]
-modulate = Color(0.7254902, 0.2509804, 0.30588236, 1)
-position = Vector2(844.2, 244.2)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(1337, 335)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("20_ngq0v")
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="FoodChecker" unique_id=233113909]
-offset_left = 695.0
-offset_top = 116.0
-offset_right = 1207.0
-offset_bottom = 628.0
+offset_left = 1211.0
+offset_top = 204.0
+offset_right = 1723.0
+offset_bottom = 716.0
 scale = Vector2(0.5, 0.5)
 step = 0.2
 fill_mode = 4
 texture_under = ExtResource("5_r4lmr")
 texture_progress = ExtResource("6_hw2q6")
 
+[node name="ColorRect" type="ColorRect" parent="FoodChecker" unique_id=1609664184]
+z_index = 2
+offset_left = -42.0
+offset_top = -27.0
+offset_right = 1939.0
+offset_bottom = 1111.0
+color = Color(1, 1, 1, 0)
+
 [node name="PeopleLine" type="Node" parent="." unique_id=2019209986 node_paths=PackedStringArray("firstInLinePosition", "lastInLinePosition", "secondInLinePosition", "beforeLinePosition", "peopleSprites")]
-script = ExtResource("3_0vj75")
+script = ExtResource("8_ev5mx")
 firstInLinePosition = NodePath("../FirstPosition")
 lastInLinePosition = NodePath("../LastPosition")
 secondInLinePosition = NodePath("../SecondPosition")
 beforeLinePosition = NodePath("../BeforeLinePosition")
 originalScale = 1.0
 scaleInFirstPosition = 1.5
-peopleSprites = [NodePath("Person 1"), NodePath("Person 2"), NodePath("Person 3"), NodePath("Person 4"), NodePath("Person 5")]
-peopleInLine = 4
+peopleSprites = [NodePath("Person 1"), NodePath("Person 2"), NodePath("Person 3"), NodePath("Person 4"), NodePath("Person 5"), NodePath("Person 6")]
+peopleInLine = 5
 
 [node name="Person 1" type="Node2D" parent="PeopleLine" unique_id=923178240]
-position = Vector2(734, -106)
+position = Vector2(-113, 40)
 
 [node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 1" unique_id=67871386]
-modulate = Color(0.75172734, 0.6144861, 0.94919544, 1)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("4_upu7b")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("9_0es2j")
 
 [node name="Person 2" type="Node2D" parent="PeopleLine" unique_id=390866827]
-position = Vector2(576, -122)
+position = Vector2(-271, 24)
 
 [node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 2" unique_id=1138753354]
-modulate = Color(0.806013, 0.6901185, 0.13633436, 1)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("4_upu7b")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("10_5ff0f")
 
 [node name="Person 3" type="Node2D" parent="PeopleLine" unique_id=69706752]
-position = Vector2(424, -104)
+position = Vector2(-423, 42)
 
 [node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 3" unique_id=1105394167]
-modulate = Color(0.3715893, 0.78669375, 0.6011395, 1)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("4_upu7b")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("11_2lcyo")
 
 [node name="Person 4" type="Node2D" parent="PeopleLine" unique_id=1803111840]
-position = Vector2(249, -100)
+position = Vector2(-598, 46)
 
 [node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 4" unique_id=636964345]
-modulate = Color(0.3342756, 0.75145704, 0.8970006, 1)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("4_upu7b")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("12_ta1sm")
 
 [node name="Person 5" type="Node2D" parent="PeopleLine" unique_id=1695208110]
-position = Vector2(71, -110)
+position = Vector2(-776, 36)
 
 [node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 5" unique_id=1394906187]
-modulate = Color(0.98637825, 0.5233411, 0.6742585, 1)
-scale = Vector2(0.31, 0.31)
-texture = ExtResource("4_upu7b")
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("13_c262d")
+
+[node name="Person 6" type="Node2D" parent="PeopleLine" unique_id=1083281394]
+position = Vector2(-916, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 6" unique_id=634218089]
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("14_l7nwt")
 
 [node name="FoodButtons" type="Node" parent="." unique_id=2141274748 node_paths=PackedStringArray("playerButtonPosition", "buttonFoodSprites", "buttonSprites", "buttonRedCross")]
-script = ExtResource("5_n2y3l")
+script = ExtResource("9_jcifq")
 playerButtonPosition = [NodePath("Player1FoodPosition"), NodePath("Player2FoodPosition"), NodePath("Player3FoodPosition"), NodePath("Player4FoodPosition")]
 buttonFoodSprites = [NodePath("Patatas"), NodePath("Palmera"), NodePath("Tortelinis"), NodePath("Pizza")]
 buttonSprites = [NodePath("Player1Button"), NodePath("Player2Button"), NodePath("Player3Button"), NodePath("Player4Button")]
@@ -133,16 +154,16 @@ buttonRedCross = [NodePath("CruzRoja"), NodePath("CruzRoja2"), NodePath("CruzRoj
 playerEliminatedColor = Color(0.26438904, 0.264389, 0.264389, 1)
 
 [node name="Player1FoodPosition" type="Node2D" parent="FoodButtons" unique_id=1494374079]
-position = Vector2(189, 528)
+position = Vector2(348, 879)
 
 [node name="Player2FoodPosition" type="Node2D" parent="FoodButtons" unique_id=1552080853]
-position = Vector2(437, 528)
+position = Vector2(728, 879)
 
 [node name="Player3FoodPosition" type="Node2D" parent="FoodButtons" unique_id=1924563256]
-position = Vector2(702, 518)
+position = Vector2(1167, 869)
 
 [node name="Player4FoodPosition" type="Node2D" parent="FoodButtons" unique_id=2129879036]
-position = Vector2(976, 518)
+position = Vector2(1543, 869)
 
 [node name="Player1Button" type="Sprite2D" parent="FoodButtons" unique_id=1066350216]
 modulate = Color(0.8156863, 0.28235295, 0.3372549, 1)
@@ -164,7 +185,7 @@ texture = ExtResource("4_upu7b")
 
 [node name="Player4Button" type="Sprite2D" parent="FoodButtons" unique_id=2118991892]
 modulate = Color(0.6745098, 0.65882355, 0.27450982, 1)
-position = Vector2(119.00006, 858)
+position = Vector2(-171.59998, 1092.4)
 scale = Vector2(0.4, 0.4)
 texture = ExtResource("4_upu7b")
 
@@ -184,30 +205,26 @@ scale = Vector2(0.59999996, 0.59999996)
 texture = ExtResource("6_0vj75")
 
 [node name="CruzRoja4" type="Sprite2D" parent="FoodButtons" unique_id=1171036401]
-position = Vector2(119.00006, 858)
+position = Vector2(-171.6, 1092.4)
 scale = Vector2(0.59999996, 0.59999996)
 texture = ExtResource("6_0vj75")
 
 [node name="Patatas" type="Sprite2D" parent="FoodButtons" unique_id=1944868995]
-modulate = Color(0.9211309, 0.8254837, 0.53299534, 1)
-position = Vector2(-228.99995, 344)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(747.19995, 1351.2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("17_c262d")
 
 [node name="Palmera" type="Sprite2D" parent="FoodButtons" unique_id=1054930493]
-modulate = Color(0.50075865, 0.2537226, 0.17330572, 1)
-position = Vector2(-150.99994, 191.00003)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(825.19995, 1198.2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("18_l7nwt")
 
 [node name="Tortelinis" type="Sprite2D" parent="FoodButtons" unique_id=1184989913]
-modulate = Color(0.3210476, 0.69119173, 0.439041, 1)
-position = Vector2(-253.99997, 240.99997)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(722.19995, 1248.2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("19_m551s")
 
 [node name="Pizza" type="Sprite2D" parent="FoodButtons" unique_id=1821137202]
-modulate = Color(0.7266658, 0.24940369, 0.3048025, 1)
-position = Vector2(-293.99997, 146.99998)
-scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_upu7b")
+position = Vector2(682.19995, 1154.2)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("20_ngq0v")

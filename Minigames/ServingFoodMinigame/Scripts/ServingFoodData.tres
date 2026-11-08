@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="MinigameData" format=3 uid="uid://dxf84l2io7jxy"]
+
+[ext_resource type="Script" uid="uid://drgtpugs7dwxs" path="res://Scripts/Minigames/MinigameData.gd" id="1_hh6tl"]
+[ext_resource type="Texture2D" uid="uid://bi6ercdq2vvjf" path="res://icon.svg" id="2_424bi"]
+
+[resource]
+script = ExtResource("1_hh6tl")
+minigameName = "Fast Food!"
+description = "Sirve el plato que te pidan les participantes a tiempo! No te equivoques o quedarás fuera de la partida. "
+tutorialImage = ExtResource("2_424bi")
+developersAndPosition = Dictionary[String, String]({
+"María": "Arte, sonido y diseño",
+"Shavs": "Programación y diseño"
+})
+metadata/_custom_type_script = "uid://drgtpugs7dwxs"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpdei0c4gficn"
-path="res://.godot/imported/GenericButton.png-e5f38710ec1dbe2776e57224d2f7f4ea.ctex"
+uid="uid://bfb5xuyyt1aw"
+path="res://.godot/imported/RedCross.png-7ad3c72768ed4db68d7b57348164abfc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/GenericButton.png"
-dest_files=["res://.godot/imported/GenericButton.png-e5f38710ec1dbe2776e57224d2f7f4ea.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/RedCross.png"
+dest_files=["res://.godot/imported/RedCross.png-7ad3c72768ed4db68d7b57348164abfc.ctex"]
 
 [params]
 

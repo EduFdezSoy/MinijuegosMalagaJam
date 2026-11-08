@@ -8,8 +8,10 @@ func OnMinigameStarted() -> void:
 func GameEnded(winner:int)-> void:
 	ScoreManager.AddScore(winner,1)
 	StopMinigame()
+	await get_tree().create_timer(1).timeout
+	FinishTransition()
 	print("Se acabo el juego")
-	await get_tree().create_timer(2).timeout
+	await get_tree().create_timer(1.5).timeout
 	MinigamesController.NextMinigame()
 	
 

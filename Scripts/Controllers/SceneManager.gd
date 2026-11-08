@@ -56,6 +56,7 @@ func LoadScoreScene() -> void:
 	var main_scene := get_tree().current_scene
 	var container := main_scene.get_node_or_null("MinigameContainer")
 	container.add_child(scoreSceneInstance)
+	TransitionController.MakeTransition(0,.5)
 
 func UnloadMinigame() -> void:
 	if is_instance_valid(currentMinigame):

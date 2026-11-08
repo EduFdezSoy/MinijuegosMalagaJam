@@ -13,3 +13,15 @@ func ShakeSprite(sprite: Sprite2D, duration: float = 0.3, strength: float = 5.0)
 		elapsedTime += step
 
 	sprite.position = originalPosition
+
+func FadeInOutColorRect(colorRect: ColorRect, color: Color, alpha : float, time:float) -> void:
+	colorRect.color = color
+	colorRect.color.a = 0.0
+	var tween := create_tween()
+	# Fade In
+	tween.tween_property(colorRect,"color:a",alpha,time / 2.0)
+	# Fade Out
+	tween.tween_property(colorRect,"color:a",0.0,time / 2.0)
+	
+
+	

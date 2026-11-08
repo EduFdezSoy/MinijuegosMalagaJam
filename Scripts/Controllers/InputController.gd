@@ -2,7 +2,7 @@ extends Node
 
 signal playerButtonPressed(playerId: int)
 signal playerButtonReleased(playerId: int)
-var playerButtonIsBeingPressed : Array[bool]
+var playerButtonIsBeingPressed : Array[bool] = [false,false,false,false]
 var GameInitialized: bool = false
 
 const PLAYER_ACTIONS := {

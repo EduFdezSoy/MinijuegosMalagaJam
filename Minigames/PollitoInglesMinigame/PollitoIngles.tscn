@@ -1,22 +1,22 @@
 [gd_scene format=3 uid="uid://bymi3w6nfe84"]
 
-[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_116ni"]
-[ext_resource type="Script" uid="uid://bfslgit2kd106" path="res://Scripts/Minigames/PollitoInglesMinigame/PollitoInglesMinigame.gd" id="1_u5u0k"]
-[ext_resource type="Script" uid="uid://cxd8nyje6mpp0" path="res://Scripts/Minigames/PollitoInglesMinigame/HorizontalPlayerMovement.gd" id="2_d8pki"]
-[ext_resource type="Script" uid="uid://byav5nb6ppjh" path="res://Scripts/Minigames/PollitoInglesMinigame/PollitoInglesCheck.gd" id="2_yj3q8"]
+[ext_resource type="Script" uid="uid://bfslgit2kd106" path="res://Minigames/PollitoInglesMinigame/Scripts/PollitoInglesMinigame.gd" id="1_rm7it"]
+[ext_resource type="Script" uid="uid://byav5nb6ppjh" path="res://Minigames/PollitoInglesMinigame/Scripts/PollitoInglesCheck.gd" id="2_t54ie"]
+[ext_resource type="Script" uid="uid://cxd8nyje6mpp0" path="res://Minigames/PollitoInglesMinigame/Scripts/HorizontalPlayerMovement.gd" id="3_oackh"]
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Sprites/GenericButton.png" id="4_vk0fx"]
 
 [node name="PollitoInglesMinigame" type="Node2D" unique_id=1996787499 node_paths=PackedStringArray("playersHorizontalMove", "pollitoInglesCheck")]
-script = ExtResource("1_u5u0k")
+script = ExtResource("1_rm7it")
 playersHorizontalMove = NodePath("PlayersHorizontalMove")
 pollitoInglesCheck = NodePath("PollitoInglesCheck")
 
 [node name="PollitoInglesCheck" type="Node" parent="." unique_id=2100802978 node_paths=PackedStringArray("spriteCheck")]
-script = ExtResource("2_yj3q8")
+script = ExtResource("2_t54ie")
 spriteCheck = NodePath("../GreenRedLight")
 winningXPosition = 940.0
 
 [node name="PlayersHorizontalMove" type="Node2D" parent="." unique_id=1122291142 node_paths=PackedStringArray("players")]
-script = ExtResource("2_d8pki")
+script = ExtResource("3_oackh")
 players = [NodePath("Player1"), NodePath("Player2"), NodePath("Player3"), NodePath("Player4")]
 playersInitialXPosition = 100
 horizontalMovementPerClick = 100.0
@@ -26,33 +26,33 @@ movementDuration = 0.15
 modulate = Color(0.89747417, 0.31039852, 0.28828102, 1)
 position = Vector2(100.5, 149.5)
 scale = Vector2(0.34570313, 0.20507813)
-texture = ExtResource("1_116ni")
+texture = ExtResource("4_vk0fx")
 
 [node name="Player2" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=1423625554]
 modulate = Color(0.16078432, 0.41568628, 0.76862746, 1)
 position = Vector2(100.5, 283.23)
 scale = Vector2(0.34570313, 0.20507813)
-texture = ExtResource("1_116ni")
+texture = ExtResource("4_vk0fx")
 
 [node name="Player3" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=1668542855]
 modulate = Color(0.3254902, 0.654902, 0.29803923, 1)
 position = Vector2(100.5, 399.23)
 scale = Vector2(0.34570313, 0.20507813)
-texture = ExtResource("1_116ni")
+texture = ExtResource("4_vk0fx")
 
 [node name="Player4" type="Sprite2D" parent="PlayersHorizontalMove" unique_id=494014490]
 modulate = Color(0.6745098, 0.65882355, 0.27450982, 1)
 position = Vector2(100.5, 515.23)
 scale = Vector2(0.34570313, 0.20507813)
-texture = ExtResource("1_116ni")
+texture = ExtResource("4_vk0fx")
 
 [node name="FinishLine" type="Sprite2D" parent="." unique_id=1095134998]
 modulate = Color(1, 1, 1, 0.39607844)
 position = Vector2(940, 300)
 scale = Vector2(0.14, 3.75)
-texture = ExtResource("1_116ni")
+texture = ExtResource("4_vk0fx")
 
 [node name="GreenRedLight" type="Sprite2D" parent="." unique_id=427955006]
 position = Vector2(1091, 74.000015)
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_116ni")
+texture = ExtResource("4_vk0fx")

@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://d2ho0ailfvs04"]
+
+[ext_resource type="Script" uid="uid://bohqav4p0t8rq" path="res://Scripts/Controllers/MinigamePreviewController.gd" id="1_1atff"]
+[ext_resource type="Script" uid="uid://c2iof7cfcdveo" path="res://Scripts/Minigames/MinigameReadyButton.gd" id="2_njhng"]
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Sprites/GenericButton.png" id="3_hxbka"]
+
+[node name="Minigame Preview" type="Node2D" unique_id=26331430 node_paths=PackedStringArray("playerReadyButtons", "tutorialSprite", "titleLabel", "descriptionLabel", "developersLabel")]
+script = ExtResource("1_1atff")
+playerReadyButtons = [NodePath("Player 1 Ready"), NodePath("Player 2 Ready"), NodePath("Player 3 Ready"), NodePath("Player 4 Ready")]
+tutorialSprite = NodePath("TextureRect")
+titleLabel = NodePath("Title")
+descriptionLabel = NodePath("Descripción")
+developersLabel = NodePath("DevelopBy")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1659633289]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 240.0
+offset_top = 22.000002
+offset_right = 1640.0
+offset_bottom = 872.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.91999936)
+color = Color(0.90359825, 0.90359825, 0.9035982, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1553136750]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 392.0
+offset_top = 108.0
+offset_right = 1492.0
+offset_bottom = 608.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="Label" parent="." unique_id=120007745]
+custom_maximum_size = Vector2(1200, -1)
+offset_left = 335.0
+offset_top = 22.0
+offset_right = 1535.0
+offset_bottom = 104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 59
+text = "Título"
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[node name="Descripción" type="Label" parent="." unique_id=509833858]
+custom_maximum_size = Vector2(1200, -1)
+offset_left = 345.0
+offset_top = 632.0
+offset_right = 1545.0
+offset_bottom = 697.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Descripción del minijuego bkadb asdj bkajsbdk jbaksjdb kjabskd jbaksj bkajsbd kajsbdk jabskd jabskjd bakjsdb kajsbd kajbsd "
+autowrap_mode = 2
+
+[node name="DevelopBy" type="Label" parent="." unique_id=517771423]
+custom_maximum_size = Vector2(1200, -1)
+offset_left = 345.0
+offset_top = 720.0
+offset_right = 1545.0
+offset_bottom = 785.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 22
+text = "Developer"
+autowrap_mode = 2
+
+[node name="Player 1 Ready" type="Node2D" parent="." unique_id=1393195753 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+position = Vector2(308, 993)
+script = ExtResource("2_njhng")
+readyLabel = NodePath("Label")
+buttonSprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player 1 Ready" unique_id=577635596]
+modulate = Color(0.8156863, 0.28235295, 0.3372549, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_hxbka")
+
+[node name="Label" type="Label" parent="Player 1 Ready" unique_id=1437574204]
+offset_left = -160.0
+offset_top = -88.0
+offset_right = -8.0
+offset_bottom = -23.0
+rotation = -0.39709458
+theme_override_font_sizes/font_size = 47
+text = "Ready!"
+
+[node name="Player 2 Ready" type="Node2D" parent="." unique_id=1078997859 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+position = Vector2(698, 993)
+script = ExtResource("2_njhng")
+readyLabel = NodePath("Label2")
+buttonSprite = NodePath("Sprite2D")
+
+[node name="Label2" type="Label" parent="Player 2 Ready" unique_id=1355598882]
+offset_left = -153.0
+offset_top = -88.0
+offset_right = -1.0
+offset_bottom = -23.0
+rotation = -0.39709458
+theme_override_font_sizes/font_size = 47
+text = "Ready!"
+
+[node name="Sprite2D" type="Sprite2D" parent="Player 2 Ready" unique_id=2062065526]
+modulate = Color(0.16078432, 0.41568628, 0.76862746, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_hxbka")
+
+[node name="Player 3 Ready" type="Node2D" parent="." unique_id=1128369790 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+position = Vector2(1151, 993)
+script = ExtResource("2_njhng")
+readyLabel = NodePath("Label3")
+buttonSprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player 3 Ready" unique_id=1868843090]
+modulate = Color(0.3254902, 0.654902, 0.29803923, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_hxbka")
+
+[node name="Label3" type="Label" parent="Player 3 Ready" unique_id=1301380041]
+offset_left = -150.0
+offset_top = -96.0
+offset_right = 2.0
+offset_bottom = -31.0
+rotation = -0.39709458
+theme_override_font_sizes/font_size = 47
+text = "Ready!"
+
+[node name="Player 4 Ready" type="Node2D" parent="." unique_id=2008671385 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+position = Vector2(1607, 993)
+script = ExtResource("2_njhng")
+readyLabel = NodePath("Label4")
+buttonSprite = NodePath("Sprite2D")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player 4 Ready" unique_id=1962736633]
+modulate = Color(0.6745098, 0.65882355, 0.27450982, 1)
+scale = Vector2(0.35, 0.35)
+texture = ExtResource("3_hxbka")
+
+[node name="Label4" type="Label" parent="Player 4 Ready" unique_id=1330587020]
+offset_left = -144.0
+offset_top = -96.0
+offset_right = 8.0
+offset_bottom = -31.0
+rotation = -0.39709458
+theme_override_font_sizes/font_size = 47
+text = "Ready!"

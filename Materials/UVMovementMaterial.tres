@@ -1,0 +1,10 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bo1xiuvw38hdc"]
+
+[ext_resource type="Shader" uid="uid://dqku5gsvts272" path="res://Shaders/UVMovement.gdshader" id="1_hoxpb"]
+
+[resource]
+shader = ExtResource("1_hoxpb")
+shader_parameter/direction = Vector2(-1, 1)
+shader_parameter/speed = 0.1
+shader_parameter/reveal_progress = 1.0
+shader_parameter/reveal_direction = Vector2(-1, -1)

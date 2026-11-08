@@ -1,11 +1,14 @@
 [gd_scene format=3 uid="uid://dm5h73bs117jr"]
 
-[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Assets/Sprites/GenericButton.png" id="1_hqt01"]
+[ext_resource type="Texture2D" uid="uid://cpdei0c4gficn" path="res://Sprites/GenericButton.png" id="1_hqt01"]
 [ext_resource type="Script" uid="uid://dqd747do6jri1" path="res://Scripts/PlayerButton.gd" id="2_2ny7y"]
 [ext_resource type="Script" uid="uid://cogkluld14x1i" path="res://Scripts/Controllers/RoundController.gd" id="4_2ny7y"]
 [ext_resource type="Script" uid="uid://c8xhspffwdh2y" path="res://Scripts/StartButton.gd" id="4_mpou1"]
 [ext_resource type="Script" uid="uid://vehy28ho4b6n" path="res://Scripts/PlayerSelectionContent.gd" id="4_y4jts"]
-[ext_resource type="PackedScene" uid="uid://cjrtfysm3veyl" path="res://Scenes/Minigames/ServingFoodMinigame.tscn" id="5_f0lok"]
+[ext_resource type="PackedScene" uid="uid://cjrtfysm3veyl" path="res://Minigames/ServingFoodMinigame/ServingFoodMinigame.tscn" id="5_f0lok"]
+[ext_resource type="Script" uid="uid://bcnuavmcwbljo" path="res://Scripts/TransitionEffect.gd" id="7_eub5x"]
+[ext_resource type="Material" uid="uid://bo1xiuvw38hdc" path="res://Materials/UVMovementMaterial.tres" id="7_mpou1"]
+[ext_resource type="Texture2D" uid="uid://17dpn5lmdt4y" path="res://Sprites/fondoPlaceholder.png" id="8_eub5x"]
 
 [node name="PlayerSelection" type="Node2D" unique_id=1452936896]
 
@@ -15,7 +18,7 @@ script = ExtResource("4_mpou1")
 [node name="RoundController" type="Node" parent="." unique_id=1558029353]
 script = ExtResource("4_2ny7y")
 availableMinigames = Array[PackedScene]([ExtResource("5_f0lok")])
-winsNeededToFinish = 1
+winsNeededToFinish = 2
 
 [node name="MinigameContainer" type="Node" parent="." unique_id=741273415]
 
@@ -28,10 +31,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = 190.1175
-offset_top = 167.0
-offset_right = 967.1175
-offset_bottom = 316.0
+offset_left = 573.0
+offset_top = 214.0
+offset_right = 1350.0
+offset_bottom = 363.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 60
@@ -40,7 +43,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Player 1" type="Node2D" parent="PlayerSelectionContent" unique_id=1454617281 node_paths=PackedStringArray("buttonSprite")]
-position = Vector2(250, 472)
+position = Vector2(375, 641)
 script = ExtResource("2_2ny7y")
 buttonColor = Color(0.8156863, 0.28235295, 0.3372549, 1)
 buttonSprite = NodePath("Sprite")
@@ -51,7 +54,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 
 [node name="Player 2" type="Node2D" parent="PlayerSelectionContent" unique_id=1459564953 node_paths=PackedStringArray("buttonSprite")]
-position = Vector2(471, 472)
+position = Vector2(769, 641)
 script = ExtResource("2_2ny7y")
 buttonColor = Color(0.16078432, 0.41568628, 0.76862746, 1)
 buttonSprite = NodePath("Sprite")
@@ -64,7 +67,7 @@ texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
 
 [node name="Player 3" type="Node2D" parent="PlayerSelectionContent" unique_id=1279253964 node_paths=PackedStringArray("buttonSprite")]
-position = Vector2(678, 472)
+position = Vector2(1152, 641)
 script = ExtResource("2_2ny7y")
 buttonColor = Color(0.3254902, 0.654902, 0.29803923, 1)
 buttonSprite = NodePath("Sprite")
@@ -77,7 +80,7 @@ texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
 
 [node name="Player 4" type="Node2D" parent="PlayerSelectionContent" unique_id=1368542756 node_paths=PackedStringArray("buttonSprite")]
-position = Vector2(900, 472)
+position = Vector2(1518, 641)
 script = ExtResource("2_2ny7y")
 buttonColor = Color(0.6745098, 0.65882355, 0.27450982, 1)
 buttonSprite = NodePath("Sprite")
@@ -88,3 +91,17 @@ modulate = Color(0.5071507, 0.4880826, 0.44954228, 1)
 scale = Vector2(0.35, 0.35)
 texture = ExtResource("1_hqt01")
 metadata/Color = Color(1, 1, 1, 1)
+
+[node name="TransitionEffect" type="Node" parent="." unique_id=448003498 node_paths=PackedStringArray("transitionTextureRect")]
+script = ExtResource("7_eub5x")
+transitionTextureRect = NodePath("TransitionSprite")
+
+[node name="TransitionSprite" type="TextureRect" parent="TransitionEffect" unique_id=1329845319]
+material = ExtResource("7_mpou1")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("8_eub5x")
+expand_mode = 1

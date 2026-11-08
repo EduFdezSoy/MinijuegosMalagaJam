@@ -10,6 +10,10 @@ var currentFoodAvailableForPlayers: Dictionary[int,String]
 
 @export var foodSprites : Array[Node2D]
 
+@export var  failOrSuccessColorRect:ColorRect
+@export var successColor: Color
+@export var failColor: Color
+
 var nextFood : String
 var foodIndex : int
 var miniGameLunchTime : MinigameLunchTime
@@ -43,12 +47,14 @@ func PlayerPressedButton(playerId: int) -> void:
 	print("Player ",playerId," send: ",currentFoodAvailableForPlayers[playerId], " next food is: ",nextFood)
 	if(currentFoodAvailableForPlayers[playerId] == nextFood):
 		#Sonidito y efecto de acierto
+		TweenAnimator.FadeInOutColorRect(failOrSuccessColorRect,successColor, 0.3,0.3)
 		ShowNextFood()
 		countDown.StopCountDown()
 		await get_tree().create_timer(0.5).timeout
 		if currentFoodAvailableForPlayers.size() > 1:
 			countDown.NextCountDown()
 	else:
+		TweenAnimator.FadeInOutColorRect(failOrSuccessColorRect,failColor, 0.5,0.3)
 		DeletePlayer(playerId)
 		if(currentFoodAvailableForPlayers.size() <= 1):
 			countDown.StopCountDown()

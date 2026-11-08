@@ -9,9 +9,14 @@ func _process(_delta: float) -> void:
 		#Añadir espera para la transición
 		
 		InputController.GameInitialized = true
+		
+		TransitionController.MakeTransition(1,.3)
+		await get_tree().create_timer(.4).timeout
+		
 		MinigamesController.StartMinigames()
 		SceneManager.LoadCurrentMinigame()
 		PlayersController.SetPlayerButtonsState(false)
+		
 		
 		
 		print("Empieza el juego")

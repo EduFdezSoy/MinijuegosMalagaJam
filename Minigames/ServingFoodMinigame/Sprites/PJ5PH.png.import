@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfb5xuyyt1aw"
-path="res://.godot/imported/RedCross.png-3cb2ae4b17fd1d9504be0f145907f004.ctex"
+uid="uid://cu52n2irxdu7i"
+path="res://.godot/imported/PJ5PH.png-181e9f2dcba61e30e100c1b4d09e516c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/Minigames/ServingFoodMinigame/RedCross.png"
-dest_files=["res://.godot/imported/RedCross.png-3cb2ae4b17fd1d9504be0f145907f004.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/PJ5PH.png"
+dest_files=["res://.godot/imported/PJ5PH.png-181e9f2dcba61e30e100c1b4d09e516c.ctex"]
 
 [params]
 
