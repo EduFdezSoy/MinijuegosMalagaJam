@@ -13,25 +13,32 @@ Crear un juego de minijuegos de 2 a 4 jugadores donde 1 persona gana tras haber 
 - Intenta que haya solo 1 ganador. A futuro barajaremos opciones de empate y juegos por equipos.
 
 ## Tutorial de como implementar nuevos minijuegos
-Para implementar nuevos minijuegos, tendrás que descargarte el proyecto, crear una rama en base a develop y ahí ya podrás trabajar.
-Crea una carpeta dentro de la carpeta raíz "Minijuegos" con el nombre de tu minijuego Ejemplo: "Minijuego de saltar a la comba".
+Para implementar nuevos minijuegos, tendrás que descargarte el proyecto, crear una rama en base a develop y ahí ya podrás trabajar.<br>
+Crea una carpeta dentro de la carpeta raíz "Minijuegos" con el nombre de tu minijuego Ejemplo: "Minijuego de saltar a la comba".<br>
 Ahí colocaras tus scripts, escenas, sprites... Todo lo que necesite tu minijuego.
 
-Los minijuegos deben ocurrir en una única escena. Esta escena debe de tener un script que herede de **MinigameBase**, para que pueda funcionar con la carga de niveles de forma automática.
-Para los input de los jugadores, usaremos la clase global **InputController** que tiene las siguientes señales: 
-- playerButtonPressed(playerId: int) -> Cuando un jugador ha pulsado un botón, devuelve el id del jugador
-- playerButtonReleased(playerId: int) -> Cuando el jugador ha soldato el botón, devuelve el id del jugador
-- playerButtonIsBeingPressed : Array[bool] -> También tenemos un array de tipo bool que devuelve en cada frame que botones se están pulsando. Por si vuestro juego necesita comprobar si se están pulsando los botones. Aunque es recomendable usar la combinación de los dos anteriores (Press y release) para saber si se está haciendo el hold.
+**Los minijuegos deben ocurrir en una única escena.** <br>
+Esta escena debe de tener un script que herede de **MinigameBase**, para que pueda funcionar con la carga de niveles de forma automática.<br>
+Debes crear un recurso del tipo **MinigameData** en la carpeta de tu minijuego. Este archivo es donde pondrás los datos de las personas involucradas en el minijuego y una explicación breve de como jugar al minijuego, además de una imagen que sirva de preview. Coloca este archivo en el campo **MinigameData** del nodo del minijuego.
+
+Para los input de los jugadores, usaremos la clase global **InputController** que tiene las siguientes señales: <br>
+- playerButtonPressed(playerId: int) -> Cuando un jugador ha pulsado un botón, devuelve el id del jugador<br>
+- playerButtonReleased(playerId: int) -> Cuando el jugador ha soldato el botón, devuelve el id del jugador<br>
+- playerButtonIsBeingPressed : Array[bool] -> También tenemos un array de tipo bool que devuelve en cada frame que botones se están pulsando. Por si vuestro juego necesita comprobar si se están pulsando los botones.<br>
+Aunque es recomendable usar la combinación de los dos anteriores (Press y release) para saber si se está haciendo el hold.
 
 Para probar el minijuego. Ve a la escena PlayerSelection y en el nodo **RoundController** añade al atributo **AvailableMinigames** tu escena de minijuego. ⚠️Recuerda que el nodo de la escena de tu minijuego debe tener un script que herede de **MinigameBase**
+
 Puedes quitar la escena que haya puesta en el **RoundController** para que así salga tu minijuego directamente, pero **no subas cambios de la escena de PlayerSelection al repositorio** ⚠️
-Debes crear un archivo tipo MinigameData en la carpeta de tu minijuego. Este archivo es donde pondrás los datos de las personas involucradas en el minijuego y una explicación breve de como jugar al minijuego, además de una imagen que sirva de preview. Coloca este archivo en el campo **MinigameData** del nodo del minijuego.
+
 Estos datos aparecerán luego en una preview del minijuego que aparece antes de jugarlo.
+
 Ahora al darle al play debería salirte una pantalla con botones. Pulsa las teclas **A S D F** para activar los botones de los jugadores y pulsa la tecla **Espacio** para comenzar. *Estas teclas son las que se usarán para testear los inputs de los jugadores, pero a futuro en la versión jugable, los inputs irán definidos por las personas que vayan a jugar.*
-Aparecerá la ventana preview del minijuego y deberás pulsar los botones de los jugadores para indicar que están listos.
+
+Aparecerá la ventana preview del minijuego y deberás pulsar los botones de los jugadores para indicar que están listos.<br>
 Después empezará la escena del minijuego.
 
-A la hora de implementar tu minijuego. Usa las funciones de **OnMinigameStarted** para iniciar tu minijuego. Esta función es llamada desde el gestor de escenas para indicar cuando empieza el minijuego.
+A la hora de implementar tu minijuego. Usa las funciones de **OnMinigameStarted** para iniciar tu minijuego. Esta función es llamada desde el gestor de escenas para indicar cuando empieza el minijuego.<br>
 Cuando termine tu minijuego, añade la puntuación de quien ha ganado con **ScoreManager.AddVictoryToPlayer(idDelJugadorGanador)** y para continuar con el siguiente minijuego usa **MinigamesController.NextMinigame()**
 
 Para saber que jugadores están activos, usa **activePlayers** de **PlayersController** que es un array tipo bool que te dice que jugadores están jugando actualmente (true si están jugando, false si no están jugando)
