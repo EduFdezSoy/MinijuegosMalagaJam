@@ -27,7 +27,7 @@ Para probar el minijuego. Ve a la escena PlayerSelection y en el nodo **RoundCon
 Puedes quitar la escena que haya puesta en el **RoundController** para que así salga tu minijuego directamente, pero **no subas cambios de la escena de PlayerSelection al repositorio** ⚠️
 Debes crear un archivo tipo MinigameData en la carpeta de tu minijuego. Este archivo es donde pondrás los datos de las personas involucradas en el minijuego y una explicación breve de como jugar al minijuego, además de una imagen que sirva de preview. Coloca este archivo en el campo **MinigameData** del nodo del minijuego.
 Estos datos aparecerán luego en una preview del minijuego que aparece antes de jugarlo.
-Ahora al darle al play debería salirte una pantalla con botones. Pusla las teclas **A S D F** para activar los botones de los jugadores y pulsa la tecla **Espacio** para comenzar.
+Ahora al darle al play debería salirte una pantalla con botones. Pulsa las teclas **A S D F** para activar los botones de los jugadores y pulsa la tecla **Espacio** para comenzar. *Estas teclas son las que se usarán para testear los inputs de los jugadores, pero a futuro en la versión jugable, los inputs irán definidos por las personas que vayan a jugar.*
 Aparecerá la ventana preview del minijuego y deberás pulsar los botones de los jugadores para indicar que están listos.
 Después empezará la escena del minijuego.
 
