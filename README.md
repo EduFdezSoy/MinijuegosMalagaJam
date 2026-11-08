@@ -30,4 +30,29 @@ Estos datos aparecerán luego en una preview del minijuego que aparece antes de 
 Ahora al darle al play debería salirte una pantalla con botones. Pusla las teclas **A S D F** para activar los botones de los jugadores y pulsa la tecla **Espacio** para comenzar.
 Aparecerá la ventana preview del minijuego y deberás pulsar los botones de los jugadores para indicar que están listos.
 Después empezará la escena del minijuego.
-  
+
+A la hora de implementar tu minijuego. Usa las funciones de **OnMinigameStarted** para iniciar tu minijuego. Esta función es llamada desde el gestor de escenas para indicar cuando empieza el minijuego.
+Cuando termine tu minijuego, añade la puntuación de quien ha ganado con **ScoreManager.AddVictoryToPlayer(idDelJugadorGanador)** y para continuar con el siguiente minijuego usa **MinigamesController.NextMinigame()**
+
+Para saber que jugadores están activos, usa **activePlayers** de **PlayersController** que es un array tipo bool que te dice que jugadores están jugando actualmente (true si están jugando, false si no están jugando)
+
+## Subir tu minijuego
+Una vez hayas probado tu minijuego y comprobado que todo funciona bien. Haz commit de tu rama y hazle push para subirla. Después ve a Github y debería aparecer un mensaje para hacer el pull request:
+<p align="center">
+<img width="800" height="300" alt="Tutorial6" src="https://github.com/user-attachments/assets/251aaa43-8ac3-473e-9a91-2b78ceb81ecf" />
+</p>
+Crea tu pull request para subir los cambios
+<p align="center">
+<img width="478" height="243" alt="Tutorial7" src="https://github.com/user-attachments/assets/a563ee08-ecde-412f-b7ed-8e661ee46c49" />
+</p>
+Pon la información necesaria para que podamos ver como probar tu juego en el pull request y dale a **Create pull request**
+<p align="center">
+<img width="800" height="500" alt="Tutorial8" src="https://github.com/user-attachments/assets/91c1d276-2b4b-4935-a0ff-c0a085df08b4" />
+</p>
+Con eso ya estará todo perfecto y listo para ser revisado
+
+
+## Herramientas adicionales de ayuda
+Para sustituir Dotween hay una clase global llamada **TweenAnimator** que por ahora cuenta con las siguientes funciones:
+- ShakeSprite(sprite: Sprite2D, duration: float = 0.3, strength: float = 5.0) -> Hace vibrar un sprite
+- FadeInOutColorRect(colorRect: ColorRect, color: Color, alpha : float, time:float) -> Hace que la transparencia de un color rect vaya del valor en el que está al valor dado en la variable alpha en el tiempo dado y luego vuelve al valor original.
