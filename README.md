@@ -45,6 +45,9 @@ Ahora al darle al play debería salirte una pantalla con botones. Pulsa las tecl
 Aparecerá la ventana preview del minijuego y deberás pulsar los botones de los jugadores para indicar que están listos.<br>
 Después empezará la escena del minijuego.
 
+## Consejos
+Como los botones del juego son Rojo, Azul, Verde y Amarillo, si aparece input en pantalla para cada jugador, intenta que sea del color de los botones para que el jugador sepa cuando tiene que pulsar. Por ejemplo, en el minijuego de servir comida, los platos de la comida asignada a cada jugador, son de esos colores. 
+
 ## Subir tu minijuego
 Una vez hayas probado tu minijuego y comprobado que todo funciona bien. Haz commit de tu rama y hazle push para subirla. Después ve a Github y debería aparecer un mensaje para hacer el pull request:
 <p align="center">
