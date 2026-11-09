@@ -17,7 +17,7 @@ Crear un juego de minijuegos de 2 a 4 jugadores donde 1 persona gana tras haber 
 
 Para implementar nuevos minijuegos, tendrás que descargarte el proyecto, crear una rama partiendo desde develop y ahí ya podrás trabajar.<br>
 Es recomendable que la rama tenga un nombre estilo: **minigames/NombreMinijuego** para tener los minijuegos agrupados en una sección "minigames".<br>
-Crea una carpeta dentro de la carpeta raíz "Minijuegos" con el nombre de tu minijuego Ejemplo: "Minijuego de saltar a la comba".<br>
+Crea una carpeta dentro de la carpeta raíz **Minijuegos** con el nombre de tu minijuego Ejemplo: "Minijuego de saltar a la comba".<br>
 Ahí colocaras tus scripts, escenas, sprites... Todo lo que necesite tu minijuego.
 
 **Los minijuegos deben ocurrir en una única escena.** <br>
