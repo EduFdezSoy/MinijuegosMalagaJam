@@ -14,7 +14,7 @@ func InitializeScores(jugadoresEnPartida: Array[int]) -> void:
 
 
 # Suma puntos a un jugador.
-func AddScore(playerId: int, points: int) -> void:
+func AddVictoryToPlayer(playerId: int) -> void:
 	if(playerId == 0):
 		print("No ganó nadie")
 	
@@ -22,7 +22,7 @@ func AddScore(playerId: int, points: int) -> void:
 		push_warning("El jugador %d no está registrado." % playerId)
 		return
 
-	playerScores[playerId] += points
+	playerScores[playerId] += 1
 
 
 # Devuelve un diccionario ordenado de mayor a menor score

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwughx2ed4046"
-path="res://.godot/imported/TorteliniPlaceHolder.png-9168187726c565099d220b8c5fe98532.ctex"
+uid="uid://cwxynfq0f2cth"
+path="res://.godot/imported/Personaje5.png-fa80751f7644f1f760f14ca4ae7d95bb.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/ServingFoodMinigame/Sprites/TorteliniPlaceHolder.png"
-dest_files=["res://.godot/imported/TorteliniPlaceHolder.png-9168187726c565099d220b8c5fe98532.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/Personaje5.png"
+dest_files=["res://.godot/imported/Personaje5.png-fa80751f7644f1f760f14ca4ae7d95bb.ctex"]
 
 [params]
 

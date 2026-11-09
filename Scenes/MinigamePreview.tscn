@@ -13,6 +13,7 @@ descriptionLabel = NodePath("Descripción")
 developersLabel = NodePath("DevelopBy")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1659633289]
+z_index = 99
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -28,6 +29,7 @@ scale = Vector2(1, 0.91999936)
 color = Color(0.90359825, 0.90359825, 0.9035982, 1)
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1553136750]
+z_index = 100
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -41,6 +43,7 @@ grow_horizontal = 2
 grow_vertical = 2
 
 [node name="Title" type="Label" parent="." unique_id=120007745]
+z_index = 100
 custom_maximum_size = Vector2(1200, -1)
 offset_left = 335.0
 offset_top = 22.0
@@ -53,6 +56,7 @@ horizontal_alignment = 1
 autowrap_mode = 2
 
 [node name="Descripción" type="Label" parent="." unique_id=509833858]
+z_index = 100
 custom_maximum_size = Vector2(1200, -1)
 offset_left = 345.0
 offset_top = 632.0
@@ -64,6 +68,7 @@ text = "Descripción del minijuego bkadb asdj bkajsbdk jbaksjdb kjabskd jbaksj b
 autowrap_mode = 2
 
 [node name="DevelopBy" type="Label" parent="." unique_id=517771423]
+z_index = 100
 custom_maximum_size = Vector2(1200, -1)
 offset_left = 345.0
 offset_top = 720.0
@@ -75,6 +80,7 @@ text = "Developer"
 autowrap_mode = 2
 
 [node name="Player 1 Ready" type="Node2D" parent="." unique_id=1393195753 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+z_index = 100
 position = Vector2(308, 993)
 script = ExtResource("2_njhng")
 readyLabel = NodePath("Label")
@@ -95,6 +101,7 @@ theme_override_font_sizes/font_size = 47
 text = "Ready!"
 
 [node name="Player 2 Ready" type="Node2D" parent="." unique_id=1078997859 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+z_index = 100
 position = Vector2(698, 993)
 script = ExtResource("2_njhng")
 readyLabel = NodePath("Label2")
@@ -115,6 +122,7 @@ scale = Vector2(0.35, 0.35)
 texture = ExtResource("3_hxbka")
 
 [node name="Player 3 Ready" type="Node2D" parent="." unique_id=1128369790 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+z_index = 100
 position = Vector2(1151, 993)
 script = ExtResource("2_njhng")
 readyLabel = NodePath("Label3")
@@ -135,6 +143,7 @@ theme_override_font_sizes/font_size = 47
 text = "Ready!"
 
 [node name="Player 4 Ready" type="Node2D" parent="." unique_id=2008671385 node_paths=PackedStringArray("readyLabel", "buttonSprite")]
+z_index = 100
 position = Vector2(1607, 993)
 script = ExtResource("2_njhng")
 readyLabel = NodePath("Label4")

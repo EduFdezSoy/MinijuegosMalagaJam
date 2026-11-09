@@ -1,0 +1,328 @@
+[gd_scene format=3 uid="uid://cjrtfysm3veyl"]
+
+[ext_resource type="Script" uid="uid://cwgtrohnmnv21" path="res://Minigames/ServingFoodMinigame/Scripts/MinigameLunchTime.gd" id="1_jx185"]
+[ext_resource type="Resource" uid="uid://dxf84l2io7jxy" path="res://Minigames/ServingFoodMinigame/Scripts/ServingFoodData.tres" id="2_d3aln"]
+[ext_resource type="Script" uid="uid://dulxaqsgd7jgj" path="res://Minigames/ServingFoodMinigame/Scripts/FoodChecker.gd" id="3_rg8dv"]
+[ext_resource type="Script" uid="uid://bkkhqthwrw70d" path="res://Minigames/ServingFoodMinigame/Scripts/IncrementalCountDown.gd" id="4_unlj4"]
+[ext_resource type="Texture2D" uid="uid://if7ln0alv7pl" path="res://Minigames/ServingFoodMinigame/Sprites/Patatas.png" id="5_d7xb4"]
+[ext_resource type="Texture2D" uid="uid://cy2hibh5s7vpg" path="res://Minigames/ServingFoodMinigame/Sprites/CircleBackground.png" id="5_r4lmr"]
+[ext_resource type="Texture2D" uid="uid://bfb5xuyyt1aw" path="res://Minigames/ServingFoodMinigame/Sprites/RedCross.png" id="6_0vj75"]
+[ext_resource type="Texture2D" uid="uid://ckoaeveln1ppx" path="res://Minigames/ServingFoodMinigame/Sprites/Palmera.png" id="6_7b2wp"]
+[ext_resource type="Texture2D" uid="uid://doaea01dvkkww" path="res://Minigames/ServingFoodMinigame/Sprites/FillCircle.png" id="6_hw2q6"]
+[ext_resource type="Texture2D" uid="uid://uilsitikeg2u" path="res://Minigames/ServingFoodMinigame/Sprites/Ravioli.png" id="7_ecr1a"]
+[ext_resource type="Texture2D" uid="uid://bnrcdjfaie31v" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje1.png" id="8_cxuc3"]
+[ext_resource type="Script" uid="uid://c5i20f1q8e62p" path="res://Minigames/ServingFoodMinigame/Scripts/PeopleLine.gd" id="8_ev5mx"]
+[ext_resource type="Texture2D" uid="uid://cp8hsfu56xnle" path="res://Minigames/ServingFoodMinigame/Sprites/Pizza.png" id="8_fs404"]
+[ext_resource type="Script" uid="uid://duyvboy7v2ung" path="res://Minigames/ServingFoodMinigame/Scripts/MinigameActionButton.gd" id="9_jcifq"]
+[ext_resource type="Texture2D" uid="uid://b2sa4j5jgueve" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje2.png" id="9_w4ydq"]
+[ext_resource type="Texture2D" uid="uid://dmjmuy4kvqr78" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje3.png" id="10_fj5bc"]
+[ext_resource type="Texture2D" uid="uid://b4dbqgcqd3hh8" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje4.png" id="11_nfydy"]
+[ext_resource type="Texture2D" uid="uid://cwxynfq0f2cth" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje5.png" id="12_kdqe4"]
+[ext_resource type="Texture2D" uid="uid://uggeiiiqfs0n" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje6.png" id="13_c5k1a"]
+[ext_resource type="Texture2D" uid="uid://d3ns2ucmo1wwj" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje7.png" id="14_qkvua"]
+[ext_resource type="Texture2D" uid="uid://b7rncd0cblp10" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje8.png" id="15_yhlqg"]
+[ext_resource type="Texture2D" uid="uid://bois8s0japjky" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje9.png" id="16_d7xb4"]
+[ext_resource type="Texture2D" uid="uid://d2ux4lf36eqcn" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje10.png" id="17_7b2wp"]
+[ext_resource type="Texture2D" uid="uid://q0n20eattu2i" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje11.png" id="18_ecr1a"]
+[ext_resource type="Texture2D" uid="uid://crih6cmpinm7g" path="res://Minigames/ServingFoodMinigame/Sprites/Personaje12.png" id="19_fs404"]
+[ext_resource type="Texture2D" uid="uid://egwsj6y0438m" path="res://Minigames/ServingFoodMinigame/Sprites/FondoMinijuego.png" id="23_3r4de"]
+[ext_resource type="Texture2D" uid="uid://b6vdfmw4jmpes" path="res://Minigames/ServingFoodMinigame/Sprites/Mesa.png" id="24_fg0o6"]
+[ext_resource type="Texture2D" uid="uid://5uenqr21riv" path="res://Minigames/ServingFoodMinigame/Sprites/SombraPlato.png" id="25_3r4de"]
+[ext_resource type="Texture2D" uid="uid://x7cahsjdwawh" path="res://Minigames/ServingFoodMinigame/Sprites/PlatoRojo.png" id="26_fg0o6"]
+[ext_resource type="Texture2D" uid="uid://g1stpau3x1wq" path="res://Minigames/ServingFoodMinigame/Sprites/PlatoAzul.png" id="27_xcjvp"]
+[ext_resource type="Texture2D" uid="uid://woanpbsits7e" path="res://Minigames/ServingFoodMinigame/Sprites/PlatoVerde.png" id="28_hty1k"]
+[ext_resource type="Texture2D" uid="uid://bnjgxeqppcsj8" path="res://Minigames/ServingFoodMinigame/Sprites/PlatoAmarillo.png" id="29_g2jy6"]
+
+[node name="MinijuegoAComer" type="Node2D" unique_id=249033107 node_paths=PackedStringArray("foodChecker")]
+script = ExtResource("1_jx185")
+foodChecker = NodePath("FoodChecker")
+minigameData = ExtResource("2_d3aln")
+
+[node name="FirstPosition" type="Node2D" parent="." unique_id=823751089]
+position = Vector2(1006, 504)
+
+[node name="SecondPosition" type="Node2D" parent="." unique_id=1522578228]
+position = Vector2(569, 542)
+
+[node name="LastPosition" type="Node2D" parent="." unique_id=1294708112]
+position = Vector2(26, 542)
+
+[node name="BeforeLinePosition" type="Node2D" parent="." unique_id=709121406]
+position = Vector2(-1613, 304)
+
+[node name="FoodChecker" type="Node" parent="." unique_id=598215589 node_paths=PackedStringArray("peopleLine", "actionButtons", "countDown", "foodSprites", "playerPlates", "failOrSuccessColorRect")]
+script = ExtResource("3_rg8dv")
+peopleLine = NodePath("../PeopleLine")
+actionButtons = NodePath("../FoodButtons")
+countDown = NodePath("CountDown")
+foodSprites = [NodePath("PatatasSprite"), NodePath("PalmeraSprite"), NodePath("TorteliniSprite"), NodePath("PizzaSprite")]
+playerPlates = [NodePath("Player1Plate"), NodePath("Player2Plate"), NodePath("Player3Plate"), NodePath("Player4Plate")]
+failOrSuccessColorRect = NodePath("ColorRect")
+successColor = Color(0.40114012, 0.78016233, 0.48454028, 1)
+failColor = Color(0.93, 0.111600004, 0.15252015, 1)
+
+[node name="CountDown" type="Node" parent="FoodChecker" unique_id=1181019987 node_paths=PackedStringArray("progress")]
+script = ExtResource("4_unlj4")
+initialCountDownTime = 2.0
+progress = NodePath("../TextureProgressBar")
+
+[node name="Player1Plate" type="Sprite2D" parent="FoodChecker" unique_id=997624616]
+position = Vector2(1503, 281)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("26_fg0o6")
+
+[node name="Player2Plate" type="Sprite2D" parent="FoodChecker" unique_id=1228502311]
+position = Vector2(1503, 281)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("27_xcjvp")
+
+[node name="Player3Plate" type="Sprite2D" parent="FoodChecker" unique_id=880330533]
+position = Vector2(1503, 281)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("28_hty1k")
+
+[node name="Player4Plate" type="Sprite2D" parent="FoodChecker" unique_id=572268617]
+position = Vector2(1503, 281)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("29_g2jy6")
+
+[node name="PatatasSprite" type="Sprite2D" parent="FoodChecker" unique_id=1433409565]
+position = Vector2(1503, 281)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("5_d7xb4")
+
+[node name="PalmeraSprite" type="Sprite2D" parent="FoodChecker" unique_id=1468121680]
+position = Vector2(1503, 281)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("6_7b2wp")
+
+[node name="TorteliniSprite" type="Sprite2D" parent="FoodChecker" unique_id=324615145]
+position = Vector2(1503, 281)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("7_ecr1a")
+
+[node name="PizzaSprite" type="Sprite2D" parent="FoodChecker" unique_id=1044735880]
+position = Vector2(1503, 281)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("8_fs404")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="FoodChecker" unique_id=233113909]
+offset_left = 1326.0
+offset_top = 107.0
+offset_right = 1838.0
+offset_bottom = 619.0
+scale = Vector2(0.7, 0.7)
+step = 0.2
+fill_mode = 4
+texture_under = ExtResource("5_r4lmr")
+texture_progress = ExtResource("6_hw2q6")
+
+[node name="ColorRect" type="ColorRect" parent="FoodChecker" unique_id=1609664184]
+z_index = 2
+offset_left = -42.0
+offset_top = -27.0
+offset_right = 1939.0
+offset_bottom = 1111.0
+color = Color(1, 1, 1, 0)
+
+[node name="PeopleLine" type="Node" parent="." unique_id=2019209986 node_paths=PackedStringArray("firstInLinePosition", "lastInLinePosition", "secondInLinePosition", "beforeLinePosition", "peopleSprites")]
+script = ExtResource("8_ev5mx")
+firstInLinePosition = NodePath("../FirstPosition")
+lastInLinePosition = NodePath("../LastPosition")
+secondInLinePosition = NodePath("../SecondPosition")
+beforeLinePosition = NodePath("../BeforeLinePosition")
+originalScale = 0.4
+scaleInFirstPosition = 1.0
+peopleSprites = [NodePath("Person 1"), NodePath("Person 2"), NodePath("Person 3"), NodePath("Person 4"), NodePath("Person 5"), NodePath("Person 6"), NodePath("Person 7"), NodePath("Person 8"), NodePath("Person 9"), NodePath("Person 10"), NodePath("Person 11"), NodePath("Person 12")]
+peopleInLine = 5
+
+[node name="Person 1" type="Node2D" parent="PeopleLine" unique_id=923178240]
+position = Vector2(-206, 40)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 1" unique_id=67871386]
+texture = ExtResource("8_cxuc3")
+
+[node name="Person 2" type="Node2D" parent="PeopleLine" unique_id=390866827]
+position = Vector2(-364, 24)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 2" unique_id=1138753354]
+texture = ExtResource("9_w4ydq")
+
+[node name="Person 3" type="Node2D" parent="PeopleLine" unique_id=69706752]
+position = Vector2(-516, 42)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 3" unique_id=1105394167]
+texture = ExtResource("10_fj5bc")
+
+[node name="Person 4" type="Node2D" parent="PeopleLine" unique_id=1803111840]
+position = Vector2(-691, 46)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 4" unique_id=636964345]
+texture = ExtResource("11_nfydy")
+
+[node name="Person 5" type="Node2D" parent="PeopleLine" unique_id=1695208110]
+position = Vector2(-869, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 5" unique_id=1394906187]
+texture = ExtResource("12_kdqe4")
+
+[node name="Person 6" type="Node2D" parent="PeopleLine" unique_id=1083281394]
+position = Vector2(-1009, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 6" unique_id=634218089]
+texture = ExtResource("13_c5k1a")
+
+[node name="Person 7" type="Node2D" parent="PeopleLine" unique_id=1268661872]
+position = Vector2(-1193, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 7" unique_id=2047981809]
+texture = ExtResource("14_qkvua")
+
+[node name="Person 8" type="Node2D" parent="PeopleLine" unique_id=1655757661]
+position = Vector2(-1504, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 8" unique_id=1328768056]
+texture = ExtResource("15_yhlqg")
+
+[node name="Person 9" type="Node2D" parent="PeopleLine" unique_id=1033778701]
+position = Vector2(-1764, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 9" unique_id=1103102162]
+texture = ExtResource("16_d7xb4")
+
+[node name="Person 10" type="Node2D" parent="PeopleLine" unique_id=233008661]
+position = Vector2(-2007, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 10" unique_id=1163118265]
+texture = ExtResource("17_7b2wp")
+
+[node name="Person 11" type="Node2D" parent="PeopleLine" unique_id=577779515]
+position = Vector2(-2264, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 11" unique_id=1654288576]
+texture = ExtResource("18_ecr1a")
+
+[node name="Person 12" type="Node2D" parent="PeopleLine" unique_id=1173525243]
+position = Vector2(-2513, 36)
+
+[node name="Sprite2D" type="Sprite2D" parent="PeopleLine/Person 12" unique_id=1948641668]
+texture = ExtResource("19_fs404")
+
+[node name="FoodButtons" type="Node" parent="." unique_id=2141274748 node_paths=PackedStringArray("playerButtonPosition", "buttonFoodSprites", "playerPlates", "buttonRedCross")]
+script = ExtResource("9_jcifq")
+playerButtonPosition = [NodePath("Player1FoodPosition"), NodePath("Player2FoodPosition"), NodePath("Player3FoodPosition"), NodePath("Player4FoodPosition")]
+buttonFoodSprites = [NodePath("Patatas"), NodePath("Palmera"), NodePath("Tortelinis"), NodePath("Pizza")]
+playerPlates = [NodePath("Player1"), NodePath("Player2"), NodePath("Player3"), NodePath("Player4")]
+buttonRedCross = [NodePath("CruzRoja"), NodePath("CruzRoja2"), NodePath("CruzRoja3"), NodePath("CruzRoja4")]
+playerEliminatedColor = Color(0.26438904, 0.264389, 0.264389, 1)
+
+[node name="Player1FoodPosition" type="Node2D" parent="FoodButtons" unique_id=1494374079]
+position = Vector2(300, 880)
+
+[node name="Player2FoodPosition" type="Node2D" parent="FoodButtons" unique_id=1552080853]
+position = Vector2(740, 880)
+
+[node name="Player3FoodPosition" type="Node2D" parent="FoodButtons" unique_id=1924563256]
+position = Vector2(1180, 880)
+
+[node name="Player4FoodPosition" type="Node2D" parent="FoodButtons" unique_id=2129879036]
+position = Vector2(1620, 880)
+
+[node name="Player1" type="Node2D" parent="FoodButtons" unique_id=313085210]
+position = Vector2(-226, 336)
+
+[node name="Shadow" type="Sprite2D" parent="FoodButtons/Player1" unique_id=480136355]
+z_index = 6
+position = Vector2(0, 66)
+texture = ExtResource("25_3r4de")
+
+[node name="Player1Button" type="Sprite2D" parent="FoodButtons/Player1" unique_id=1066350216]
+z_index = 7
+texture = ExtResource("26_fg0o6")
+
+[node name="Player2" type="Node2D" parent="FoodButtons" unique_id=1072528551]
+position = Vector2(-620, 373)
+
+[node name="Shadow" type="Sprite2D" parent="FoodButtons/Player2" unique_id=1504577470]
+z_index = 6
+position = Vector2(0, 66)
+texture = ExtResource("25_3r4de")
+
+[node name="Player2Plate" type="Sprite2D" parent="FoodButtons/Player2" unique_id=1271649935]
+z_index = 7
+texture = ExtResource("27_xcjvp")
+
+[node name="Player3" type="Node2D" parent="FoodButtons" unique_id=289014883]
+position = Vector2(-500, 744)
+
+[node name="Shadow" type="Sprite2D" parent="FoodButtons/Player3" unique_id=2034159290]
+z_index = 6
+position = Vector2(0, 66)
+texture = ExtResource("25_3r4de")
+
+[node name="Player3Plate" type="Sprite2D" parent="FoodButtons/Player3" unique_id=24378522]
+z_index = 7
+texture = ExtResource("28_hty1k")
+
+[node name="Player4" type="Node2D" parent="FoodButtons" unique_id=1443537546]
+position = Vector2(-312, 550)
+
+[node name="Shadow" type="Sprite2D" parent="FoodButtons/Player4" unique_id=1034593615]
+z_index = 6
+position = Vector2(0, 66)
+texture = ExtResource("25_3r4de")
+
+[node name="Player4Plate" type="Sprite2D" parent="FoodButtons/Player4" unique_id=1836297744]
+z_index = 7
+texture = ExtResource("29_g2jy6")
+
+[node name="CruzRoja" type="Sprite2D" parent="FoodButtons" unique_id=398958773]
+z_index = 14
+position = Vector2(-225.99997, 504)
+texture = ExtResource("6_0vj75")
+
+[node name="CruzRoja2" type="Sprite2D" parent="FoodButtons" unique_id=1967203677]
+z_index = 14
+position = Vector2(-212, 679)
+texture = ExtResource("6_0vj75")
+
+[node name="CruzRoja3" type="Sprite2D" parent="FoodButtons" unique_id=1736281026]
+z_index = 14
+position = Vector2(-111.99994, 858)
+texture = ExtResource("6_0vj75")
+
+[node name="CruzRoja4" type="Sprite2D" parent="FoodButtons" unique_id=1171036401]
+z_index = 14
+position = Vector2(-171.6, 1092.4)
+texture = ExtResource("6_0vj75")
+
+[node name="Patatas" type="Sprite2D" parent="FoodButtons" unique_id=1944868995]
+z_index = 13
+position = Vector2(-231, 1163)
+texture = ExtResource("5_d7xb4")
+
+[node name="Palmera" type="Sprite2D" parent="FoodButtons" unique_id=1054930493]
+z_index = 13
+position = Vector2(-153, 1010)
+texture = ExtResource("6_7b2wp")
+
+[node name="Tortelinis" type="Sprite2D" parent="FoodButtons" unique_id=1184989913]
+z_index = 13
+position = Vector2(-256, 1060)
+texture = ExtResource("7_ecr1a")
+
+[node name="Pizza" type="Sprite2D" parent="FoodButtons" unique_id=1821137202]
+z_index = 13
+position = Vector2(-296, 966)
+texture = ExtResource("8_fs404")
+
+[node name="Background" type="TextureRect" parent="." unique_id=173938396]
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("23_3r4de")
+
+[node name="ServingTable" type="TextureRect" parent="." unique_id=1000880511]
+z_index = 5
+offset_right = 1920.0
+offset_bottom = 1080.0
+texture = ExtResource("24_fg0o6")

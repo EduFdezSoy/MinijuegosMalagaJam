@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cmqnh41jwo37o"
-path="res://.godot/imported/PJ1PH.png-c973d60fc4da3239491530bd44f82a8b.ctex"
+uid="uid://b6vdfmw4jmpes"
+path="res://.godot/imported/Mesa.png-5f4f380a8a3cb7ba92799aa1cf0ed7ac.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/ServingFoodMinigame/Sprites/PJ1PH.png"
-dest_files=["res://.godot/imported/PJ1PH.png-c973d60fc4da3239491530bd44f82a8b.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/Mesa.png"
+dest_files=["res://.godot/imported/Mesa.png-5f4f380a8a3cb7ba92799aa1cf0ed7ac.ctex"]
 
 [params]
 
