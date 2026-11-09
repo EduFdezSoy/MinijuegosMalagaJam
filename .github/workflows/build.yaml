@@ -1,0 +1,42 @@
+name: Build
+
+on:
+  push:
+  workflow_dispatch:
+
+env:
+  EXPORT_NAME: MinijuegosMalagaJam
+
+jobs:
+  export-windows:
+    name: Export Windows
+    runs-on: ubuntu-latest
+    container:
+      image: barichello/godot-ci:4.6.3
+
+    steps:
+      - name: Install dependencies
+        run: |
+          apt-get update
+          apt-get install -y fontconfig
+
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Import project files
+        run: godot --headless --editor --quit --import
+
+      - name: Build
+        run: |
+          mkdir -p "build/windows"
+          godot --headless --export-release "Windows Desktop" \
+            "build/windows/${EXPORT_NAME}.exe"
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: ${{ env.EXPORT_NAME }}-windows
+          path: build/windows/
+          if-no-files-found: error
