@@ -9,6 +9,7 @@ var currentFoodAvailableForPlayers: Dictionary[int,String]
 @export var countDown : IncrementalCountDown
 
 @export var foodSprites : Array[Node2D]
+@export var playerPlates : Array[Node2D]
 
 @export var  failOrSuccessColorRect:ColorRect
 @export var successColor: Color
@@ -25,7 +26,6 @@ func Initialize(miniGame: MinigameLunchTime) -> void:
 	currentFoodAvailableForPlayers = SetRandomFoodToPlayers()
 	actionButtons.SetButtonSprites(currentFoodAvailableForPlayers,food)
 	SetNextFood()
-	peopleLine.Initialize()
 	countDown.StartCountDown()
 	countDown.CountDownFinished.connect(TimeIsUp)
 
@@ -34,6 +34,7 @@ func TimeIsUp() -> void:
 	for playerId in currentFoodAvailableForPlayers.keys():
 		if(currentFoodAvailableForPlayers[playerId] == nextFood):
 			playerIdEliminated = playerId
+			TweenAnimator.FadeInOutColorRect(failOrSuccessColorRect,failColor, 0.3,0.3)
 	
 	DeletePlayer(playerIdEliminated)
 	if(currentFoodAvailableForPlayers.size() > 1):
@@ -85,6 +86,7 @@ func SetNextFood() -> void:
 	nextFood = availableFood[0]
 	var index = food[nextFood]
 	foodSprites[index].show()
+	playerPlates[GetPlayerIdFromFoodName(nextFood)].show()
 
 func RemovePlayer(playerId:int) -> void:
 	#Quitar el jugador y las comidas de ese jugador de la lista
@@ -93,6 +95,8 @@ func RemovePlayer(playerId:int) -> void:
 
 func HideSprites() -> void:
 	for sprite in foodSprites:
+		sprite.hide()
+	for sprite in playerPlates:
 		sprite.hide()
 
 func SetRandomFoodToPlayers() -> Dictionary[int,String]:
@@ -107,3 +111,11 @@ func SetRandomFoodToPlayers() -> Dictionary[int,String]:
 		print("Jugador ",playersIds[index]," tiene ", shuffledFood[index])
 	
 	return foodDictionary
+
+func GetPlayerIdFromFoodName(foodName:String) -> int:
+	var playerId :int
+	for index in currentFoodAvailableForPlayers.keys():
+		if currentFoodAvailableForPlayers[index] == foodName:
+			playerId = index
+	
+	return playerId

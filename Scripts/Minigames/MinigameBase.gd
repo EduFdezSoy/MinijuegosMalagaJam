@@ -1,6 +1,6 @@
 
 class_name MinigameBase
-extends Node2D
+extends Node
 
 # Se emite cuando termina el minijuego
 signal minigameFinished(results: Dictionary)
@@ -56,8 +56,10 @@ func OnInputPlayerPressed(playerId: int) -> void:
 func OnPlayerPressed(playerId: int) -> void:
 	pass
 
-func FinishTransition() -> void:
+func TransitionToNextMinigame() -> void:
 	TransitionController.MakeTransition(1,0.4)
+	await get_tree().create_timer(1.5).timeout
+	MinigamesController.NextMinigame()
 
 
 func StopMinigame() -> void:

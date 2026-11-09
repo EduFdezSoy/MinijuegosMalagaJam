@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cd8bduxavhjc1"
-path="res://.godot/imported/PalmeraPlaceHolder.png-23bc2b174606950db89869aa5e6e1182.ctex"
+uid="uid://g1stpau3x1wq"
+path="res://.godot/imported/PlatoAzul.png-dd2773203d6116cd49849a6f6c3dcbe0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/ServingFoodMinigame/Sprites/PalmeraPlaceHolder.png"
-dest_files=["res://.godot/imported/PalmeraPlaceHolder.png-23bc2b174606950db89869aa5e6e1182.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/PlatoAzul.png"
+dest_files=["res://.godot/imported/PlatoAzul.png-dd2773203d6116cd49849a6f6c3dcbe0.ctex"]
 
 [params]
 

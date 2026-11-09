@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c32cuwy068en"
-path="res://.godot/imported/PatatasPlaceHolder.png-2d6cf07abdf210bbf67a7660dba0bfd1.ctex"
+uid="uid://cp8hsfu56xnle"
+path="res://.godot/imported/Pizza.png-fea217dd2def9184239be774e8cbf527.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/ServingFoodMinigame/Sprites/PatatasPlaceHolder.png"
-dest_files=["res://.godot/imported/PatatasPlaceHolder.png-2d6cf07abdf210bbf67a7660dba0bfd1.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/Pizza.png"
+dest_files=["res://.godot/imported/Pizza.png-fea217dd2def9184239be774e8cbf527.ctex"]
 
 [params]
 

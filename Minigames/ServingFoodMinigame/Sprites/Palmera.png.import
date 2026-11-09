@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://byqiiikvwu4gr"
-path="res://.godot/imported/PJ3PH.png-83969618396b82f9406d679af5cc68a9.ctex"
+uid="uid://ckoaeveln1ppx"
+path="res://.godot/imported/Palmera.png-0945ebf137dcae21d216f90dfd1fb811.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/ServingFoodMinigame/Sprites/PJ3PH.png"
-dest_files=["res://.godot/imported/PJ3PH.png-83969618396b82f9406d679af5cc68a9.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/Palmera.png"
+dest_files=["res://.godot/imported/Palmera.png-0945ebf137dcae21d216f90dfd1fb811.ctex"]
 
 [params]
 

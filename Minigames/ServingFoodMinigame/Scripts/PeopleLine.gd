@@ -11,14 +11,21 @@ class_name PeopleLine
 @export var peopleSprites : Array[Node2D]
 @export var peopleInLine : int
 
-func Initialize() -> void:
+func _ready() -> void:
+	
+	for node in peopleSprites:
+		node.scale = Vector2.ONE * originalScale
+	
 	peopleSprites.shuffle()
 	peopleSprites[0].global_position = firstInLinePosition.global_position
 	peopleSprites[0].scale = Vector2.ONE * scaleInFirstPosition
 	
+	
+	
 	for index in range(1,peopleInLine):
 		var positionInLine: Vector2 = lerp(secondInLinePosition.global_position,lastInLinePosition.global_position,(index-1)/(float)(peopleInLine-2))
 		peopleSprites[index].global_position = positionInLine
+		
 	
 
 func MovePeopleToPosition() -> void:

@@ -31,11 +31,10 @@ func GetPlayersCount() -> int:
 	return activePlayerCount
 
 func GetCurrentPlayersIds() -> Array[int]:
-
 #Preparamos un array con el id de los jugadores
 	var playerIds: Array[int] = []
 	for playerId in activePlayers.size():
 		if(activePlayers[playerId]):
 			playerIds.append(playerId)
-
+	
 	return playerIds;

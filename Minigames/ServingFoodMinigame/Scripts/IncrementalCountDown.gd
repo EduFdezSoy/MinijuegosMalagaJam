@@ -25,14 +25,14 @@ func NextCountDown() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if countDownActive:
-		progress.value = (currentCountDown / lastCountDown) * 100
 		if(currentCountDown > 0) : 
 			currentCountDown -= delta
 		
 		if currentCountDown <= 0:
 			countDownActive = false
 			CountDownFinished.emit()
-			
+		
+		progress.value = (currentCountDown / lastCountDown) * 100
 	
 func StopCountDown() -> void:
 	countDownActive = false

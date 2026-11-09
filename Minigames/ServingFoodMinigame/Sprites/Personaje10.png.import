@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cuokq8crt273j"
-path="res://.godot/imported/PJ6PH.png-c5b8661a5d94df2143781eda0fcd6a44.ctex"
+uid="uid://d2ux4lf36eqcn"
+path="res://.godot/imported/Personaje10.png-814dc65e417ba92f83ec46c1fb7aecb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Minigames/ServingFoodMinigame/Sprites/PJ6PH.png"
-dest_files=["res://.godot/imported/PJ6PH.png-c5b8661a5d94df2143781eda0fcd6a44.ctex"]
+source_file="res://Minigames/ServingFoodMinigame/Sprites/Personaje10.png"
+dest_files=["res://.godot/imported/Personaje10.png-814dc65e417ba92f83ec46c1fb7aecb4.ctex"]
 
 [params]
 
