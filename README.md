@@ -13,6 +13,8 @@ Crear un juego de minijuegos de 2 a 4 jugadores donde 1 persona gana tras haber 
 - Intenta que haya solo 1 ganador. A futuro barajaremos opciones de empate y juegos por equipos.
 
 ## Tutorial de como implementar nuevos minijuegos
+> Además de este tutorial, también teneis una versión en video: https://youtu.be/a1aKUky1O78
+
 Para implementar nuevos minijuegos, tendrás que descargarte el proyecto, crear una rama partiendo desde develop y ahí ya podrás trabajar.<br>
 Es recomendable que la rama tenga un nombre estilo: **minigames/NombreMinijuego** para tener los minijuegos agrupados en una sección "minigames".<br>
 Crea una carpeta dentro de la carpeta raíz "Minijuegos" con el nombre de tu minijuego Ejemplo: "Minijuego de saltar a la comba".<br>
