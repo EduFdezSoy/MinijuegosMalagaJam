@@ -33,7 +33,7 @@
 [ext_resource type="Texture2D" uid="uid://woanpbsits7e" path="res://Minigames/ServingFoodMinigame/Sprites/PlatoVerde.png" id="28_hty1k"]
 [ext_resource type="Texture2D" uid="uid://bnjgxeqppcsj8" path="res://Minigames/ServingFoodMinigame/Sprites/PlatoAmarillo.png" id="29_g2jy6"]
 
-[node name="MinijuegoAComer" type="Node2D" unique_id=249033107 node_paths=PackedStringArray("foodChecker")]
+[node name="MinijuegoAComer" type="Node" unique_id=435577728 node_paths=PackedStringArray("foodChecker")]
 script = ExtResource("1_jx185")
 foodChecker = NodePath("FoodChecker")
 minigameData = ExtResource("2_d3aln")
@@ -317,6 +317,7 @@ position = Vector2(1694, 1600)
 texture = ExtResource("8_fs404")
 
 [node name="Background" type="TextureRect" parent="." unique_id=173938396]
+z_index = -1
 offset_right = 1920.0
 offset_bottom = 1080.0
 texture = ExtResource("23_3r4de")

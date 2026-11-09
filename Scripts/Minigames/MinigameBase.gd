@@ -1,6 +1,6 @@
 
 class_name MinigameBase
-extends Node2D
+extends Node
 
 # Se emite cuando termina el minijuego
 signal minigameFinished(results: Dictionary)
